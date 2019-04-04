@@ -1,0 +1,3 @@
+[submodule "vivado-git"]
+	path = vivado-git
+	url = git@github.com:rugebiker/vivado-git.git
