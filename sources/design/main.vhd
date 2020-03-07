@@ -28,9 +28,10 @@ architecture structural of main is
             clk, rst : in  std_logic;
             start    : in  std_logic;
             done     : out std_logic;
-            working  : out std_logic;
             wz_id    : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
-            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0)
+            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
+            mem_en   : out std_logic;
+            mem_we   : out std_logic
         );
     end component;    
     component convert is
@@ -51,16 +52,16 @@ architecture structural of main is
 
     begin
         mem_en <= working;
-        mem_we <= wz_id(wz_id'high);
         control_u : control
             port map(
                 clk => clk,
                 rst => rst,
                 start => start,
                 done => done,
-                working => working,
                 wz_id => wz_id,
-                mem_addr => mem_addr
+                mem_addr => mem_addr,
+                mem_en => working,
+                mem_we => mem_we
             );
         convert_u : convert
             port map(
