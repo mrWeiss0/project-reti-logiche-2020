@@ -26,10 +26,11 @@ architecture test of convert_tb is
     signal wz_id : std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1  downto 0) := (others => '0');
     signal address_in : std_logic_vector(data_sz - 1 - 1 downto 0);
     signal address_out : std_logic_vector(data_sz - 1 downto 0);
-    type wz_base_array is array(0 to 2 ** (wz_id'length - 1) - 1) of std_logic_vector(address_in'range);
+    type wz_base_subarray is array(0 to 2 ** (wz_id'length - 1) - 1) of std_logic_vector(address_in'range);
+    type wz_base_array is array(0 to 1) of wz_base_subarray;
     signal wz_base : wz_base_array := (
-        "001",
-        "010"
+        ("001", "100"), -- good
+        ("101","110")   -- collision
     );
     
     begin
@@ -43,16 +44,18 @@ architecture test of convert_tb is
             );
         process is
             begin
-                wait for clk_period / 2;
-                for i in wz_base'range loop
-                    wz_id <=  std_logic_vector(to_unsigned(i, wz_id'length));
-                    address_in <= wz_base(i);
+                for k in wz_base'range loop
                     wait for clk_period;
-                end loop;
-                wz_id <=  std_logic_vector(to_unsigned(wz_base'length, wz_id'length));
-                for i in 0 to 2 ** (address_in'length) - 1 loop
-                    address_in <= std_logic_vector(to_unsigned(i, address_in'length));
-                    wait for clk_period;
+                    for i in wz_base(0)'range loop
+                        wz_id <=  std_logic_vector(to_unsigned(i, wz_id'length));
+                        address_in <= wz_base(k)(i);
+                        wait for clk_period;
+                    end loop;
+                    wz_id <=  std_logic_vector(to_unsigned(wz_base'length, wz_id'length));
+                    for i in 0 to 2 ** (address_in'length) - 1 loop
+                        address_in <= std_logic_vector(to_unsigned(i, address_in'length));
+                        wait for clk_period;
+                    end loop;
                 end loop;
                 wait;
         end process;

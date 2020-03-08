@@ -40,7 +40,7 @@ architecture structural of convert is
     signal valid : std_logic_vector(encoded'range);
     
     begin
-        process(wz_id) is
+        id_decode : process(wz_id) is
             variable wz_id_sel_t, wz_id_high : std_logic_vector(wz_id_sel'range);
             
             begin
@@ -50,7 +50,7 @@ architecture structural of convert is
                 wz_id_sel_t := wz_id_sel_t and not wz_id_high;
                 wz_id_sel <= wz_id_sel_t;
         end process;
-        process(clk) is
+        wz_reg : process(clk) is
             begin
                 if rising_edge(clk) then
                     for i in wz_base'range loop
@@ -71,7 +71,18 @@ architecture structural of convert is
                     address_out => encoded(i),
                     valid => valid(i)
                 );
-            address_out <= encoded(i) when valid(i) = '1' else (others => 'Z');
         end generate encode_l;
-        address_out <= '0' & address_in when nor_reduce(valid) = '1' else (others => 'Z');
+        mux :  process(encoded, valid, address_in) is
+            variable reduce, valid_i : std_logic_vector(address_out'range);
+            
+            begin
+                reduce := (others => '0');
+                for i in encoded'range loop
+                    valid_i := (others => valid(i));
+                    reduce := reduce or (encoded(i) and valid_i);
+                end loop;
+                valid_i := (others => nor_reduce(valid));
+                reduce := reduce or (('0' & address_in) and valid_i);
+                address_out <= reduce;
+        end process;
 end structural;
