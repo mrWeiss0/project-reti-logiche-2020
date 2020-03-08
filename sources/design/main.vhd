@@ -40,18 +40,15 @@ architecture structural of main is
             log_Dwz : natural := log_Dwz
         );
         port(
-            clk, rst    : in  std_logic;
-            working     : in  std_logic;
+            clk         : in  std_logic;
             wz_id       : in  std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1  downto 0);
             address_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
             address_out : out std_logic_vector(data_sz - 1 downto 0)
         );
     end component;
-    signal working : std_logic;
     signal wz_id : std_logic_vector(mem_addr'range);
 
     begin
-        mem_en <= working;
         control_u : control
             port map(
                 clk => clk,
@@ -60,14 +57,12 @@ architecture structural of main is
                 done => done,
                 wz_id => wz_id,
                 mem_addr => mem_addr,
-                mem_en => working,
+                mem_en => mem_en,
                 mem_we => mem_we
             );
         convert_u : convert
             port map(
                 clk => clk,
-                rst => rst,
-                working => working,
                 wz_id => wz_id,
                 address_in => data_in,
                 address_out => data_out

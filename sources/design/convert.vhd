@@ -10,8 +10,7 @@ entity convert is
         log_Dwz : natural
     );
     port(
-        clk, rst    : in  std_logic;
-        working     : in  std_logic;
+        clk         : in  std_logic;
         wz_id       : in  std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1 downto 0);
         address_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
         address_out : out std_logic_vector(data_sz - 1 downto 0)
@@ -23,6 +22,7 @@ architecture structural of convert is
     component encode is
         generic(
             data_sz : positive := data_sz;
+            log_Dwz : natural := log_Dwz;
             id : natural
         );
         port(
@@ -53,8 +53,6 @@ architecture structural of convert is
         process(clk) is
             begin
                 if rising_edge(clk) then
---                    if rst = '1' then
---                        wz_id_st <= (others => '0');
                     for i in wz_base'range loop
                         if (wz_id_sel(i)) = '1' then
                             wz_base(i) <= address_in;

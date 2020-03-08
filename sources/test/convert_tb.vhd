@@ -16,8 +16,7 @@ architecture test of convert_tb is
             log_Dwz : natural := log_Dwz
         );
         port(
-            clk, rst    : in  std_logic;
-            working     : in  std_logic;
+            clk         : in  std_logic;
             wz_id       : in  std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1  downto 0);
             address_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
             address_out : out std_logic_vector(data_sz - 1 downto 0)
@@ -30,7 +29,7 @@ architecture test of convert_tb is
     type wz_base_array is array(0 to 2 ** (wz_id'length - 1) - 1) of std_logic_vector(address_in'range);
     signal wz_base : wz_base_array := (
         "001",
-        "100"
+        "010"
     );
     
     begin
@@ -38,8 +37,6 @@ architecture test of convert_tb is
         uut : convert
             port map(
                 clk => clk,
-                rst => '0',
-                working => '0',
                 wz_id => wz_id,
                 address_in => address_in,
                 address_out => address_out
@@ -53,7 +50,10 @@ architecture test of convert_tb is
                     wait for clk_period;
                 end loop;
                 wz_id <=  std_logic_vector(to_unsigned(wz_base'length, wz_id'length));
-                address_in <= (others => '1');
+                for i in 0 to 2 ** (address_in'length) - 1 loop
+                    address_in <= std_logic_vector(to_unsigned(i, address_in'length));
+                    wait for clk_period;
+                end loop;
                 wait;
         end process;
 end test;

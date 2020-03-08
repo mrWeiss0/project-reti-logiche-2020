@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
-      <Cursor1Time time="1000000000fs"></Cursor1Time>
+      <ZoomEndTime time="1100000001fs"></ZoomEndTime>
+      <Cursor1Time time="150000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="366"></NameColumnWidth>
-      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+      <ValueColumnWidth column_width="115"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wvobject type="logic" fp_name="/convert_tb/clk">
@@ -27,7 +27,6 @@
    <wvobject type="array" fp_name="/convert_tb/uut/wz_id">
       <obj_property name="ElementShortName">wz_id[1:0]</obj_property>
       <obj_property name="ObjectShortName">wz_id[1:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/convert_tb/uut/wz_id_sel">
       <obj_property name="ElementShortName">wz_id_sel[1:0]</obj_property>
@@ -46,13 +45,27 @@
    <wvobject type="array" fp_name="/convert_tb/uut/encoded">
       <obj_property name="ElementShortName">encoded[1:0][3:0]</obj_property>
       <obj_property name="ObjectShortName">encoded[1:0][3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/convert_tb/uut/encoded[1]">
+         <obj_property name="ElementShortName">[1][3:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/convert_tb/uut/encoded[0]">
+         <obj_property name="ElementShortName">[0][3:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/convert_tb/uut/valid">
       <obj_property name="ElementShortName">valid[1:0]</obj_property>
       <obj_property name="ObjectShortName">valid[1:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/convert_tb/address_out">
       <obj_property name="ElementShortName">address_out[3:0]</obj_property>
       <obj_property name="ObjectShortName">address_out[3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>
