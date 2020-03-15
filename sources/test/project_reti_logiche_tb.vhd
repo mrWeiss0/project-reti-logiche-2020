@@ -3,24 +3,21 @@ use ieee.std_logic_1164.all;
 use work.test_data.all;
 use work.test.all;
 
-entity main_tb is
-end main_tb;
+entity project_reti_logiche_tb is
+end project_reti_logiche_tb;
 
-architecture test of main_tb is
-    component main is
-        generic(
-            data_sz : positive := data_out_sz;
-            log_Dwz : natural := log_Dwz
-        );
+architecture test of project_reti_logiche_tb is
+    component project_reti_logiche is
         port(
-            clk, rst : in  std_logic;
-            start    : in  std_logic;
-            data_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
-            done     : out std_logic;
-            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
-            mem_en   : out std_logic;
-            mem_we   : out std_logic;
-            data_out : out std_logic_vector(data_sz - 1 downto 0)
+            i_clk     : in  std_logic;
+            i_start   : in  std_logic;
+            i_rst     : in  std_logic;
+            i_data    : in  std_logic_vector(7 downto 0);
+            o_address : out std_logic_vector(15 downto 0);
+            o_done    : out std_logic;
+            o_en      : out std_logic;
+            o_we      : out std_logic;
+            o_data    : out std_logic_vector(7 downto 0)
         );
     end component;
     
@@ -29,7 +26,7 @@ architecture test of main_tb is
     signal rst, start : std_logic;
     signal data_in : std_logic_vector(data_in_sz - 1 downto 0);
     signal done : std_logic;
-    signal mem_addr : std_logic_vector(log_Nwz + 1 - 1 downto 0);
+    signal mem_addr : std_logic_vector(15 downto 0);
     signal mem_en, mem_we : std_logic;
     signal data_out : std_logic_vector(data_out_sz - 1 downto 0);
     
@@ -37,7 +34,7 @@ architecture test of main_tb is
     signal test_address_curr : test_address_r;
     shared variable actual_clr : boolean := false;
     signal actual : std_logic_vector(data_out'range);
-    
+
     begin
         clock(clk, running);
         run_test(
@@ -62,16 +59,16 @@ architecture test of main_tb is
             write_data => data_out,
             read_data => data_in
         );
-        main_u : main
+        uut : project_reti_logiche
             port map(
-                clk      => clk,
-                rst      => rst,
-                start    => start,
-                data_in  => data_in,
-                done     => done,
-                mem_addr => mem_addr,
-                mem_en   => mem_en,
-                mem_we   => mem_we,
-                data_out => data_out
+                i_clk     => clk,
+                i_rst     => rst,
+                i_start   => start,
+                i_data    => data_in,
+                o_done    => done,
+                o_address => mem_addr,
+                o_en      => mem_en,
+                o_we      => mem_we,
+                o_data    => data_out
             );
 end test;
