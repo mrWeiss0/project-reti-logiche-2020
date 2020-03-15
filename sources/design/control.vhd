@@ -21,17 +21,15 @@ architecture structural of control is
     signal working, done_s, convert : std_logic;
     signal wz_id_st, wz_id_incr : unsigned(wz_id'range);
     signal wz_id_cur : std_logic_vector(wz_id'range);
-    signal mem_addr_uns : unsigned(mem_addr'range);
     
     begin
         working <= start and not done_s;
         done <= done_s;
         wz_id <= wz_id_cur;
         wz_id_incr <= wz_id_st + 1;
-        mem_addr_uns <=
-            wz_id_incr when convert = '1' else
-            wz_id_st;
-        mem_addr <= std_logic_vector(mem_addr_uns);
+        mem_addr <=
+            std_logic_vector(wz_id_incr) when convert = '1' else
+            std_logic_vector(wz_id_st);
         mem_en <= working;
         mem_we <= convert;
         process(clk) is
@@ -50,7 +48,7 @@ architecture structural of control is
                         wz_id_cur <= std_logic_vector(wz_id_st);
                     end if;
                     -- convert trigger
-                    if (rst or done_s) = '1' then
+                    if (rst or convert) = '1' then
                         convert <= '0';
                     elsif working = '1' then
                         convert <= wz_id_st(wz_id_st'high);
