@@ -17,38 +17,39 @@ entity project_reti_logiche is
 end project_reti_logiche;
 
 architecture structural of project_reti_logiche is
-    constant data_sz_c : positive := o_data'length;
-    constant log_Dwz_c : natural := 2;
+    constant data_sz : positive := o_data'length;
+    constant log_Dwz : natural := 2;
+    constant log_Nwz : natural := log_Nwz(log_Dwz, data_sz);
     component main is
         generic(
-            data_sz : positive := data_sz_c;
-            log_Dwz : natural := log_Dwz_c
+            data_sz : positive := data_sz;
+            log_Dwz : natural := log_Dwz
         );
         port(
             clk, rst : in  std_logic;
             start    : in  std_logic;
             data_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
             done     : out std_logic;
-            mem_addr : out std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1 downto 0);
+            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
             mem_en   : out std_logic;
             mem_we   : out std_logic;
             data_out : out std_logic_vector(data_sz - 1 downto 0)
         );
     end component;
-    signal mem_addr_s : std_logic_vector(log_Nwz(log_Dwz_c, data_sz_c) + 1 - 1 downto 0);
 
     begin
-        o_address <= (o_address'high downto mem_addr_s'length => '0') & mem_addr_s;
+        o_address(o_address'high downto log_Nwz + 1) <= (others => '0');
+        o_data(o_data'high downto data_sz) <= (others => '0');
         main_u : main
             port map(
                 clk      => i_clk,
                 rst      => i_rst,
                 start    => i_start,
-                data_in  => i_data(data_sz_c - 1 - 1 downto 0),
+                data_in  => i_data(data_sz - 1 - 1 downto 0),
                 done     => o_done,
-                mem_addr => mem_addr_s,
+                mem_addr => o_address(log_Nwz + 1 - 1 downto 0),
                 mem_en   => o_en,
                 mem_we   => o_we,
-                data_out => o_data
+                data_out => o_data(data_sz - 1 downto 0)
             );
 end structural;
