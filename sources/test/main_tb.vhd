@@ -65,7 +65,7 @@ architecture test of main_tb is
     signal mem_en, mem_we : std_logic;
     signal data_out : std_logic_vector(data_sz - 1 downto 0);
     
-    constant reset_count : natural := 2;
+    constant reset_count : natural := 4;
     constant address_count : natural := 8;
     type wz_base_array is array(0 to 2 ** log_Nwz - 1) of std_logic_vector(data_in'range);
     type test_address_r is record
@@ -107,6 +107,38 @@ architecture test of main_tb is
                 ("011", "1101"),
                 ("100", "1110"),
                 ("101", "0101"),
+                ("110", "0110"),
+                ("111", "0111")
+            )
+        ),
+        3 => (
+            wz_base => (
+                "010",
+                "100"
+            ),
+            test_address => (
+                ("000", "0000"),
+                ("001", "0001"),
+                ("010", "1001"),
+                ("011", "1010"),
+                ("100", "1101"),
+                ("101", "1110"),
+                ("110", "0110"),
+                ("111", "0111")
+            )
+        ),
+        4 => (
+            wz_base => (
+                "100",
+                "010"
+            ),
+            test_address => (
+                ("000", "0000"),
+                ("001", "0001"),
+                ("010", "1101"),
+                ("011", "1110"),
+                ("100", "1001"),
+                ("101", "1010"),
                 ("110", "0110"),
                 ("111", "0111")
             )
@@ -171,6 +203,7 @@ architecture test of main_tb is
         end process;
         process(clk) is
             variable mem_addr_int : natural;
+            variable read : std_logic_vector(data_in'range);
         
             begin
                 if rising_edge(clk) then
@@ -183,24 +216,25 @@ architecture test of main_tb is
                         if mem_addr_int = wz_base_curr'high + 2 then
                             if mem_we = '1' then
                                 actual <= data_out;
-                                data_in <= data_out(data_in'range);
+                                read := data_out(read'range);
                             else
                                 report "Read from address " & integer'image(mem_addr_int) severity warning;
-                                data_in <= actual(data_in'range);
+                                read := actual(read'range);
                             end if;
                         else
                             if mem_we = '1' then
                              report "Write to illegal address " & integer'image(mem_addr_int) severity error;
                             end if;
                             if mem_addr_int = wz_base_curr'high + 1 then
-                                data_in <= test_address_curr.address;
+                                read := test_address_curr.address;
                             elsif mem_addr_int <= wz_base_curr'high then
-                                data_in <= wz_base_curr(mem_addr_int);
+                                read := wz_base_curr(mem_addr_int);
                             else
                                 report "Read from illegal address " & integer'image(mem_addr_int) severity error;
-                                data_in <= (others => 'U');
+                                read := (others => 'U');
                             end if;
                         end if;
+                        data_in <= read after 1 ns;
                     end if;
                 end if;
         end process;
