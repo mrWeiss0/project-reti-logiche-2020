@@ -33,11 +33,13 @@ architecture structural of convert is
         );
     end component;
     signal wz_id_sel : std_logic_vector(Nwz - 1 downto 0);
-    type wz_base_array is array(wz_id_sel'range) of std_logic_vector(address_in'range);
+    type wz_base_array is array(0 to wz_id_sel'length - 1) of std_logic_vector(address_in'range);
     signal wz_base : wz_base_array;
-    type encoded_array is array(wz_id_sel'range) of std_logic_vector(address_out'range);
+    type encoded_array is array(wz_base'range) of std_logic_vector(address_out'range);
     signal encoded : encoded_array;
     signal valid : std_logic_vector(encoded'range);
+    type mux_array is array(0 to wz_base'length + 1 - 1) of std_logic_vector(address_out'range);
+    signal mux : mux_array;
     
     begin
         id_decode : process(wz_id) is
@@ -72,17 +74,25 @@ architecture structural of convert is
                     valid => valid(i)
                 );
         end generate encode_l;
-        mux :  process(encoded, valid, address_in) is
-            variable reduce, valid_i : std_logic_vector(address_out'range);
+        muxer : process(encoded, valid, address_in) is
+            variable valid_i : std_logic_vector(address_out'range);
             
             begin
-                reduce := (others => '0');
                 for i in encoded'range loop
                     valid_i := (others => valid(i));
-                    reduce := reduce or (encoded(i) and valid_i);
+                    mux(i) <= encoded(i) and valid_i;
                 end loop;
                 valid_i := (others => nor_reduce(valid));
-                reduce := reduce or (('0' & address_in) and valid_i);
-                address_out <= reduce;
+                mux(encoded'length) <= ('0' & address_in) and valid_i;
+        end process;
+        reduce : process(mux) is
+            variable or_reduce : std_logic_vector(address_out'range);
+            
+            begin
+                or_reduce := (others => '0');
+                for i in mux'range loop
+                    or_reduce := or_reduce or mux(i);
+                end loop;
+                address_out <= or_reduce;
         end process;
 end structural;
