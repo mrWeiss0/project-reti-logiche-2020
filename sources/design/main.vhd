@@ -2,6 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.common.all;
 
+-- Main entity of the project.
+-- consists of a control component, for the input, output and control logic,
+-- and a convert component, that stores the data and computes the result.
+
 entity main is
     generic(
         data_sz : positive;

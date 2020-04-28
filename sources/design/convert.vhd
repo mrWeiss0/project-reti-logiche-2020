@@ -4,6 +4,12 @@ use ieee.numeric_std.all;
 use ieee.std_logic_misc.all;
 use work.common.all;
 
+-- Conversion unit, this does the computation and stores the
+-- the working zones. It receives the data read from memory
+-- and, if it is a working zone address, its id.
+-- Output address is valid only if all the working zones are set
+-- and they DO NOT OVERLAP.
+
 entity convert is
     generic(
         data_sz : positive;

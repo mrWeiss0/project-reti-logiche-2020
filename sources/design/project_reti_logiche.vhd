@@ -2,6 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.common.all;
 
+-- This entity is a wrapper for the main entity.
+-- It defines all the parameters given in the project specifications
+-- and connects the relevant ranges of the buses to the
+-- instantiated component.
+
 entity project_reti_logiche is
     port(
         i_clk     : in  std_logic;

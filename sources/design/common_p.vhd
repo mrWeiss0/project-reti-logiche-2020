@@ -1,4 +1,6 @@
 package common is
+    -- Return the log2 of the number of working zones
+    -- given the log2 of their dimension and the size of addresses
     function log_Nwz(log_Dwz : natural; data_sz : positive) return natural;
 end common;
 

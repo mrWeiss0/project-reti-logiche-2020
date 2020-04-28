@@ -3,6 +3,11 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.common.all;
 
+-- This entity compares the address against a single working zone.
+-- If valid is set to '1', the address matched and
+-- address_out is the converted address, otherwise
+-- address is not in the working zone and output is meaningless.
+
 entity encode is
     generic(
         data_sz : positive;

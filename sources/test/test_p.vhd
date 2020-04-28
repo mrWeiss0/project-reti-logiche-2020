@@ -3,9 +3,20 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.test_data.all;
 
+-- This package implements the testbench
+
+-- The procedures defined here are used in the testbench entity
+-- to run a set of automated tests.
+-- test_data package contains all the constants and types
+-- used in the test including the values tested.
+-- The file for test_data is generated in a python script
+-- that precomputes all the expected results
+
 package test is
+    -- Generate a clock signal until running is true
     procedure clock(signal clock : inout std_logic; running : in boolean);
     
+    -- The actual test code
     procedure run_test(
         signal running : out boolean;
         signal current_test_address : out test_address_r;
@@ -16,6 +27,12 @@ package test is
         signal done : in std_logic
     );
     
+    -- This procedure serves data to the tested unit simulating
+    -- a memory that stores the data as in the specification
+    -- and is writable at the address immediatly after.
+    -- current_* are the data served on read
+    -- actual_address stores the data written at the specified address
+    -- and is reset when actual_clr is true
     procedure memory(
         signal clk : in std_logic;
         current_address : in std_logic_vector(data_sz - 1 downto 0);
@@ -86,6 +103,7 @@ package body test is
         begin
             for test_n in test_data'range loop
                 wait for clock_period;
+                -- Prepare the working zone data in memory
                 current_wz_base <= test_data(test_n).wz_base;
                 current_test_address <= ((others => 'U'), (others => 'U'));
                 reset <= '1';
@@ -93,11 +111,14 @@ package body test is
                 reset <= '0';
                 for addr_n in test_data(0).test_address'range loop
                     wait for clock_period;
+                    -- Prepare the address to test in memory
                     current_test_address_v := test_data(test_n).test_address(addr_n);
                     current_test_address <= current_test_address_v;
                     actual_clr := true;
                     start <= '1';
+                    --Test execution...
                     wait until done = '1';
+                    -- Check the value written in memory
                     if actual_address = current_test_address_v.expected then
                         passed := passed + 1;
                     else
@@ -141,6 +162,7 @@ package body test is
                 end if;
                 if en = '1' then
                     mem_addr_int := to_integer(unsigned(mem_address));
+                    -- Address to write the result
                     if mem_addr_int = current_wz_base'high + 2 then
                         if we = '1' then
                             actual_address <= write_data;
@@ -153,8 +175,10 @@ package body test is
                         if we = '1' then
                          report "Write to illegal address " & integer'image(mem_addr_int) severity error;
                         end if;
+                        -- Address of the current address value
                         if mem_addr_int = current_wz_base'high + 1 then
                             read_data_v := current_address;
+                        -- Valid working zone addresses
                         elsif mem_addr_int <= current_wz_base'high then
                             read_data_v := current_wz_base(mem_addr_int);
                         else

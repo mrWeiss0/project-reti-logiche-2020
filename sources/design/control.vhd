@@ -2,6 +2,19 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+-- Control unit, receives the start signal and manages the states.
+-- Its outputs depend on the current execution state and they control
+-- the execution of the rest of the circuit.
+
+-- On reset signal, the component is put in a starting state
+-- and will read working zones from the memory, then the address
+-- to convert. After that the converted address is written in
+-- memory in the following position and the done signal is set.
+-- Done stays '1' until start is '1', then the component
+-- ends in a state ready to read the address to convert.
+-- This is because consecutive executions assume unchanged the
+-- working zones read at the beginning.
+
 entity control is
     generic(
         log_Nwz : natural
