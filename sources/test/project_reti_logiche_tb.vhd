@@ -24,11 +24,11 @@ architecture test of project_reti_logiche_tb is
     signal running : boolean := true;
     signal clk : std_logic := '1';
     signal rst, start : std_logic;
-    signal data_in : std_logic_vector(data_in_sz - 1 downto 0);
+    signal data_in : std_logic_vector(data_sz - 1 downto 0);
     signal done : std_logic;
     signal mem_addr : std_logic_vector(15 downto 0);
     signal mem_en, mem_we : std_logic;
-    signal data_out : std_logic_vector(data_out_sz - 1 downto 0);
+    signal data_out : std_logic_vector(data_sz - 1 downto 0);
     
     signal wz_base_curr : wz_base_array;
     signal test_address_curr : test_address_r;

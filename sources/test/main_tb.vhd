@@ -9,7 +9,7 @@ end main_tb;
 architecture test of main_tb is
     component main is
         generic(
-            data_sz : positive := data_out_sz;
+            data_sz : positive := data_sz;
             log_Dwz : natural := log_Dwz
         );
         port(
@@ -27,11 +27,11 @@ architecture test of main_tb is
     signal running : boolean := true;
     signal clk : std_logic := '1';
     signal rst, start : std_logic;
-    signal data_in : std_logic_vector(data_in_sz - 1 downto 0);
+    signal data_in : std_logic_vector(data_sz - 1 downto 0);
     signal done : std_logic;
     signal mem_addr : std_logic_vector(log_Nwz + 1 - 1 downto 0);
     signal mem_en, mem_we : std_logic;
-    signal data_out : std_logic_vector(data_out_sz - 1 downto 0);
+    signal data_out : std_logic_vector(data_sz - 1 downto 0);
     
     signal wz_base_curr : wz_base_array;
     signal test_address_curr : test_address_r;
@@ -62,12 +62,12 @@ architecture test of main_tb is
             write_data => data_out,
             read_data => data_in
         );
-        main_u : main
+        uut : main
             port map(
                 clk      => clk,
                 rst      => rst,
                 start    => start,
-                data_in  => data_in,
+                data_in  => data_in(data_sz - 1 - 1 downto 0),
                 done     => done,
                 mem_addr => mem_addr,
                 mem_en   => mem_en,

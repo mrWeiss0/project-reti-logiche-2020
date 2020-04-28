@@ -6,26 +6,26 @@ use work.test_data.all;
 package test is
     procedure clock(signal clock : inout std_logic; running : in boolean);
     
-    procedure memory(
-        signal clk : in std_logic;
-        current_address : in std_logic_vector(data_in_sz - 1 downto 0);
-        current_wz_base : in wz_base_array;
-        actual_clr : inout boolean;
-        signal actual_address : inout std_logic_vector(data_out_sz - 1 downto 0);
-        en, we : in std_logic;
-        mem_address : in std_logic_vector;
-        write_data : in std_logic_vector(data_out_sz - 1 downto 0);
-        signal read_data : out std_logic_vector(data_in_sz - 1 downto 0)
-    );
-    
     procedure run_test(
         signal running : out boolean;
         signal current_test_address : out test_address_r;
         signal current_wz_base : out wz_base_array;
         signal reset, start : out std_logic;
         actual_clr : out boolean;
-        signal actual_address : in std_logic_vector(data_out_sz - 1 downto 0);
+        signal actual_address : in std_logic_vector(data_sz - 1 downto 0);
         signal done : in std_logic
+    );
+    
+    procedure memory(
+        signal clk : in std_logic;
+        current_address : in std_logic_vector(data_sz - 1 downto 0);
+        current_wz_base : in wz_base_array;
+        actual_clr : inout boolean;
+        signal actual_address : inout std_logic_vector(data_sz - 1 downto 0);
+        en, we : in std_logic;
+        mem_address : in std_logic_vector;
+        write_data : in std_logic_vector(data_sz - 1 downto 0);
+        signal read_data : out std_logic_vector(data_sz - 1 downto 0)
     );
 end test;
 
@@ -76,7 +76,7 @@ package body test is
         signal current_wz_base : out wz_base_array;
         signal reset, start : out std_logic;
         actual_clr : out boolean;
-        signal actual_address : in std_logic_vector(data_out_sz - 1 downto 0);
+        signal actual_address : in std_logic_vector(data_sz - 1 downto 0);
         signal done : in std_logic
     ) is
         constant clock_period : time := 100 ns;
@@ -121,14 +121,14 @@ package body test is
     
     procedure memory(
         signal clk : in std_logic;
-        current_address : in std_logic_vector(data_in_sz - 1 downto 0);
+        current_address : in std_logic_vector(data_sz - 1 downto 0);
         current_wz_base : in wz_base_array;
         actual_clr : inout boolean;
-        signal actual_address : inout std_logic_vector(data_out_sz - 1 downto 0);
+        signal actual_address : inout std_logic_vector(data_sz - 1 downto 0);
         en, we : in std_logic;
         mem_address : in std_logic_vector;
-        write_data : in std_logic_vector(data_out_sz - 1 downto 0);
-        signal read_data : out std_logic_vector(data_in_sz - 1 downto 0)
+        write_data : in std_logic_vector(data_sz - 1 downto 0);
+        signal read_data : out std_logic_vector(data_sz - 1 downto 0)
     ) is
         variable mem_addr_int : natural;
         variable read_data_v : std_logic_vector(read_data'range);
