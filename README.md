@@ -1,5 +1,26 @@
 Progetto finale di Reti Logiche
 ===============================
+
+## How to regenerate Vivado Project after cloning
+Get vivado-git submodule
+```
+git submodule init
+git submodule update
+```
+
+Generate test data
+```
+python3 generate.py
+```
+
+Regenerate project with vivado-git
+```
+python2 vivado-git/checkout.py
+```
+
+Vivado project is at `workspace/project_reti_logiche/project_reti_logiche.vhd`
+
+## Project specifications :it:
 Prof. Fornaciari, Prof. Palermo e Prof. Salice
 
 *(AGGIORNATO AL 7 Novembre 2019)*

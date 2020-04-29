@@ -1,5 +1,4 @@
-/IPs
-/workspace
-/.Xil
-/*.log
-/*.jou
+/workspace/
+/.Xil/
+/__pycache__/
+test_data/
