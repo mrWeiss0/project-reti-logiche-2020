@@ -44,7 +44,6 @@ architecture structural of project_reti_logiche is
 
     begin
         o_address(o_address'high downto log_Nwz + 1) <= (others => '0');
-        o_data(o_data'high downto data_sz) <= (others => '0');
         main_u : main
             port map(
                 clk      => i_clk,
@@ -55,6 +54,6 @@ architecture structural of project_reti_logiche is
                 mem_addr => o_address(log_Nwz + 1 - 1 downto 0),
                 mem_en   => o_en,
                 mem_we   => o_we,
-                data_out => o_data(data_sz - 1 downto 0)
+                data_out => o_data
             );
 end structural;

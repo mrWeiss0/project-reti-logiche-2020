@@ -26,9 +26,9 @@ architecture test of main_tb is
     end component;
     
     signal running : boolean := true;
-    signal clk : std_logic := '1';
-    signal rst, start : std_logic;
-    signal data_in : std_logic_vector(data_sz - 1 downto 0);
+    signal clk : std_logic := '0';
+    signal rst, start : std_logic := '0';
+    signal data_in : std_logic_vector(data_sz - 1 downto 0) := (others => '0');
     signal done : std_logic;
     signal mem_addr : std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
     signal mem_en, mem_we : std_logic;

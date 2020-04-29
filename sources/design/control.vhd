@@ -41,7 +41,8 @@ architecture structural of control is
         working <= start and not done_s;
         done <= done_s;
         wz_id <= wz_id_cur;
-        wz_id_pad <= (mem_addr'high downto wz_id_st'high + 1 => '0') & wz_id_st;
+        wz_id_pad(mem_addr'high downto wz_id_st'high + 1) <= (others => '0');
+        wz_id_pad(wz_id_st'range) <= wz_id_st;
         wz_id_incr <= wz_id_pad + 1;
         mem_addr <=
             std_logic_vector(wz_id_incr) when convert = '1' else

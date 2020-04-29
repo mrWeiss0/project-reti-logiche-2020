@@ -96,7 +96,6 @@ package body test is
         signal actual_address : in std_logic_vector(data_sz - 1 downto 0);
         signal done : in std_logic
     ) is
-        constant clock_period : time := 100 ns;
         variable passed : natural := 0;
         variable current_test_address_v: test_address_r;
     
