@@ -16,7 +16,7 @@ entity main is
         start    : in  std_logic;
         data_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
         done     : out std_logic;
-        mem_addr : out std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1 downto 0);
+        mem_addr : out std_logic_vector(max(log_Nwz(log_Dwz, data_sz) + 1, 2) - 1 downto 0);
         mem_en   : out std_logic;
         mem_we   : out std_logic;
         data_out : out std_logic_vector(data_sz - 1 downto 0)
@@ -33,7 +33,7 @@ architecture structural of main is
             start    : in  std_logic;
             done     : out std_logic;
             wz_id    : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
-            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
+            mem_addr : out std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
             mem_en   : out std_logic;
             mem_we   : out std_logic
         );
@@ -50,7 +50,7 @@ architecture structural of main is
             address_out : out std_logic_vector(data_sz - 1 downto 0)
         );
     end component;
-    signal wz_id : std_logic_vector(mem_addr'range);
+    signal wz_id : std_logic_vector(log_Nwz(log_Dwz, data_sz) + 1 - 1 downto 0);
 
     begin
         control_u : control

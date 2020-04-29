@@ -35,7 +35,7 @@ architecture structural of project_reti_logiche is
             start    : in  std_logic;
             data_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
             done     : out std_logic;
-            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
+            mem_addr : out std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
             mem_en   : out std_logic;
             mem_we   : out std_logic;
             data_out : out std_logic_vector(data_sz - 1 downto 0)
