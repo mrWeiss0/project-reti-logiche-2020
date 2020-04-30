@@ -65,10 +65,10 @@ architecture structural of control is
                         wz_id_cur <= std_logic_vector(wz_id_st);
                     end if;
                     -- convert trigger
-                    if (rst or convert) = '1' then
+                    if rst = '1' then
                         convert <= '0';
                     elsif working = '1' then
-                        convert <= wz_id_st(wz_id_st'high);
+                        convert <= wz_id_st(wz_id_st'high) and not convert;
                     end if;
                     -- done trigger
                     if rst = '1' then
