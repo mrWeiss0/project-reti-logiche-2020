@@ -2,3 +2,4 @@
 /.Xil/
 /__pycache__/
 test_data/
+schematic/*.autosave
