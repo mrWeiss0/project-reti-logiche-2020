@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--This file was written by TinyCAD 3.00.02 Production Release
+If you wish to view this file go to https://www.tinycad.net to
+download the executable.-->
+<TinyCADSheets>
+	<TinyCAD>
+		<NAME>Sheet 1</NAME>
+		<DETAILS>
+			<Size width='1485' height='1050'/>
+			<GUIDES horiz='7' vert='5'/>
+			<TITLE></TITLE>
+			<AUTHOR></AUTHOR>
+			<REVISION>1.0</REVISION>
+			<DOCNUMBER></DOCNUMBER>
+			<ORGANISATION></ORGANISATION>
+			<SHEETS>1 of 1</SHEETS>
+			<SHOWS>0</SHOWS>
+			<DATE></DATE>
+			<GRID spacing='100.00000' snap='1'/>
+		</DETAILS>
+		<FONT id='1'>
+			<HEIGHT>-10</HEIGHT>
+			<WIDTH>0</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='3'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='4'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>8</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Courier New</FACENAME>
+		</FONT>
+		<STYLE id='2'>
+			<STYLE>0</STYLE>
+			<COLOR>A00000</COLOR>
+			<THICKNESS>4</THICKNESS>
+		</STYLE>
+		<STYLE id='3'>
+			<STYLE>0</STYLE>
+			<COLOR>008000</COLOR>
+			<THICKNESS>4</THICKNESS>
+		</STYLE>
+		<STYLE id='4'>
+			<STYLE>0</STYLE>
+			<COLOR>000080</COLOR>
+			<THICKNESS>4</THICKNESS>
+		</STYLE>
+		<STYLE id='6'>
+			<STYLE>0</STYLE>
+			<COLOR>000000</COLOR>
+			<THICKNESS>1</THICKNESS>
+		</STYLE>
+		<STYLE id='7'>
+			<STYLE>0</STYLE>
+			<COLOR>FF0000</COLOR>
+			<THICKNESS>1</THICKNESS>
+		</STYLE>
+		<FILL id='0'>
+			<INDEX>-1</INDEX>
+			<COLOR>000000</COLOR>
+		</FILL>
+		<FILL id='2'>
+			<INDEX>0</INDEX>
+			<COLOR>AFFFFF</COLOR>
+		</FILL>
+		<SYMBOLDEF id='0'>
+			<NAME type='0'>No Symbol Defined</NAME>
+			<REF type='0'>H?</REF>
+			<DESCRIPTION></DESCRIPTION>
+			<PPP>1</PPP>
+			<GUID></GUID>
+			<TinyCAD>
+				<RECTANGLE a='0.00000,0.00000' b='-8.00000,-8.00000' style='0' fill='0'/>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<SYMBOLDEF id='2'>
+			<NAME type='0'>CONST</NAME>
+			<REF type='1'>U?</REF>
+			<DESCRIPTION>Constant value</DESCRIPTION>
+			<PPP>1</PPP>
+			<GUID></GUID>
+			<FIELD>
+				<NAME>$$SPICE_PROLOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>$$SPICE_EPILOG_PRIORITY</NAME>
+				<DEFAULT>5</DEFAULT>
+				<FT>000002</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>Package</NAME>
+				<DEFAULT>package name for PCB layout</DEFAULT>
+				<FT>000001</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<FIELD>
+				<NAME>VALUE</NAME>
+				<DEFAULT>0</DEFAULT>
+				<FT>000005</FT>
+				<VALUE></VALUE>
+				<POS>0.00000,0.00000</POS>
+			</FIELD>
+			<REF_POINT power='0' part='0' pos='8.00000,13.00000'/>
+			<TinyCAD>
+				<RECTANGLE a='4.00000,5.00000' b='8.00000,13.00000' style='6' fill='0'/>
+				<PIN pos='6.00000,3.00000' which='0' elec='1' direction='1' part='0' number='1' show='0' length='10' number_pos='0' centre_name='0'></PIN>
+			</TinyCAD>
+		</SYMBOLDEF>
+		<OPTIONS>
+			<GRID>1</GRID>
+			<UNITS>0</UNITS>
+			<COLOR_WIRE>FF0000</COLOR_WIRE>
+			<COLOR_BUS>0000FF</COLOR_BUS>
+			<COLOR_JUNCTION>000000</COLOR_JUNCTION>
+			<COLOR_NOCONNECT>000000</COLOR_NOCONNECT>
+			<COLOR_LABEL>208000</COLOR_LABEL>
+			<COLOR_POWER>000000</COLOR_POWER>
+			<COLOR_PIN>4040C0</COLOR_PIN>
+			<COLOR_HIDDEN_PIN>208020</COLOR_HIDDEN_PIN>
+			<COLOR_BACKGROUND>FFFFFF</COLOR_BACKGROUND>
+			<COLOR_NOTETEXT_FILL>AFFFFF</COLOR_NOTETEXT_FILL>
+			<COLOR_NOTETEXT_LINE>FF0000</COLOR_NOTETEXT_LINE>
+			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
+		</OPTIONS>
+		<HIERARCHICAL_SYMBOL pos='158.00000,54.00000' rotate='0' can_scale='0' scale_x='1.00000' scale_y='1.00000' file='.\control.dsn'>
+			<FIELD type='0' description='Ref' value='' show='1' pos='0.00000,0.00000'/>
+			<FIELD type='0' description='Design' value='' show='1' pos='-14.00000,2.00000'/>
+			<FIELD type='1' description='Other' value='' show='0' pos='0.00000,0.00000'/>
+		</HIERARCHICAL_SYMBOL>
+		<HIERARCHICAL_SYMBOL pos='212.00000,72.00000' rotate='0' can_scale='0' scale_x='1.00000' scale_y='1.00000' file='.\convert.dsn'>
+			<FIELD type='0' description='Ref' value='' show='1' pos='0.00000,0.00000'/>
+			<FIELD type='0' description='Design' value='' show='1' pos='-34.00000,-18.00000'/>
+			<FIELD type='1' description='Other' value='' show='0' pos='0.00000,0.00000'/>
+		</HIERARCHICAL_SYMBOL>
+		<WIRE a='92.00000,36.00000' b='120.00000,36.00000'/>
+		<WIRE a='92.00000,50.00000' b='120.00000,50.00000'/>
+		<WIRE style='2' a='158.00000,50.00000' b='164.00000,50.00000'/>
+		<WIRE style='2' a='164.00000,50.00000' b='164.00000,64.00000'/>
+		<WIRE style='2' a='164.00000,64.00000' b='174.00000,64.00000'/>
+		<WIRE a='174.00000,58.00000' b='168.00000,58.00000'/>
+		<WIRE a='120.00000,32.00000' b='92.00000,32.00000'/>
+		<WIRE a='158.00000,32.00000' b='254.00000,32.00000'/>
+		<WIRE a='158.00000,36.00000' b='254.00000,36.00000'/>
+		<WIRE a='158.00000,40.00000' b='254.00000,40.00000'/>
+		<WIRE style='3' a='212.00000,68.00000' b='254.00000,68.00000'/>
+		<RECTANGLE a='116.00000,24.00000' b='216.00000,76.00000' style='6' fill='0'/>
+		<LABEL pos='92.00000,32.00000' direction='3' font='3' color='208000' style='1'>i_clk</LABEL>
+		<LABEL pos='92.00000,36.00000' direction='3' font='3' color='208000' style='1'>i_rst</LABEL>
+		<LABEL pos='92.00000,50.00000' direction='3' font='3' color='208000' style='1'>i_start</LABEL>
+		<LABEL pos='92.00000,64.00000' direction='3' font='3' color='208000' style='1'>i_data</LABEL>
+		<LABEL pos='254.00000,32.00000' direction='2' font='3' color='208000' style='2'>o_en</LABEL>
+		<LABEL pos='254.00000,40.00000' direction='2' font='3' color='208000' style='2'>o_we</LABEL>
+		<LABEL pos='254.00000,36.00000' direction='2' font='3' color='208000' style='2'>o_done</LABEL>
+		<LABEL pos='254.00000,60.00000' direction='2' font='3' color='208000' style='2'>o_address</LABEL>
+		<LABEL pos='254.00000,68.00000' direction='2' font='3' color='208000' style='2'>o_data</LABEL>
+		<LABEL pos='168.00000,58.00000' direction='3' font='3' color='208000' style='0'>i_clk</LABEL>
+		<BUSSLASH pos='112.00000,68.00000' direction='1'/>
+		<WIRE style='3' a='174.00000,68.00000' b='112.00000,68.00000'/>
+		<WIRE style='3' a='108.00000,64.00000' b='92.00000,64.00000'/>
+		<BUSSLASH pos='246.00000,48.00000' direction='1'/>
+		<WIRE style='4' a='158.00000,44.00000' b='242.00000,44.00000'/>
+		<SYMBOL id='2' pos='230.00000,54.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='U1' show='0' pos='-10.00000,4.40000'/>
+			<FIELD type='0' description='Name' value='CONST' show='1' pos='-10.00000,-4.00000'/>
+			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
+			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='-10.00000,6.80000'/>
+			<FIELD type='5' description='VALUE' value='0' show='0' pos='-10.00000,2.00000'/>
+			<HINT pin='1' net='175'/>
+		</SYMBOL>
+		<BUSSLASH pos='246.00000,56.00000' direction='1'/>
+		<WIRE style='4' a='246.00000,56.00000' b='246.00000,48.00000'/>
+		<WIRE style='4' a='242.00000,52.00000' b='230.00000,52.00000'/>
+		<WIRE style='4' a='246.00000,56.00000' b='246.00000,60.00000'/>
+		<WIRE style='4' a='246.00000,60.00000' b='254.00000,60.00000'/>
+		<TEXT pos='223.50000,53.50000' direction='3' font='3' color='000000'>0</TEXT>
+		<BUSNAME pos='94.00000,64.00000' direction='3' font='3' color='208000'>data_sz</BUSNAME>
+		<BUSNAME pos='120.00000,68.00000' direction='3' font='3' color='208000'>data_sz-1</BUSNAME>
+		<BUSNAME pos='228.00000,68.00000' direction='3' font='3' color='208000'>data_sz</BUSNAME>
+		<BUSNAME pos='224.00000,44.00000' direction='3' font='3' color='208000'>log_Nwz+1</BUSNAME>
+		<NOTE_TEXT a='22.00000,30.00000' b='76.00000,60.00000' direction='3' style='7' fill='2' font='4' color='FF0000' border_style='1'>
+data_sz = 8
+
+log_Dwz = 2
+    Dwz = 2**log_Dwz        = 4
+
+log_Nwz = data_sz - 1 - Dwz = 3
+    Nwz = 2**log_Nwz        = 8</NOTE_TEXT>
+		<JUNCTION pos='246.00000,56.00000'/>
+		<TEXT pos='116.00000,24.00000' direction='3' font='3' color='000000'>main</TEXT>
+	</TinyCAD>
+</TinyCADSheets>

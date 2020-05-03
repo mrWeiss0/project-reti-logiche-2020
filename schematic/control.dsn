@@ -61,8 +61,8 @@ download the executable.-->
 		<PIN pos='44.00000,14.00000' which='0' elec='1' direction='2' part='0' number='1' show='1' length='20' number_pos='0' centre_name='0'>mem_en</PIN>
 		<PIN pos='44.00000,18.00000' which='0' elec='1' direction='2' part='0' number='2' show='1' length='20' number_pos='0' centre_name='0'>done</PIN>
 		<PIN pos='44.00000,22.00000' which='0' elec='1' direction='2' part='0' number='3' show='1' length='20' number_pos='0' centre_name='0'>mem_we</PIN>
-		<PIN pos='44.00000,26.00000' which='0' elec='1' direction='2' part='0' number='4' show='1' length='20' number_pos='0' centre_name='0'>wz_id</PIN>
-		<PIN pos='44.00000,32.00000' which='0' elec='1' direction='2' part='0' number='5' show='1' length='20' number_pos='0' centre_name='0'>mem_addr</PIN>
+		<PIN pos='44.00000,32.00000' which='0' elec='1' direction='2' part='0' number='4' show='1' length='20' number_pos='0' centre_name='0'>wz_id</PIN>
+		<PIN pos='44.00000,26.00000' which='0' elec='1' direction='2' part='0' number='5' show='1' length='20' number_pos='0' centre_name='0'>mem_addr</PIN>
 	</HierarchicalSymbol>
 	<TinyCAD>
 		<NAME>Sheet 1</NAME>
@@ -100,6 +100,16 @@ download the executable.-->
 			<FACENAME>Arial</FACENAME>
 		</FONT>
 		<FONT id='3'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
+		<FONT id='4'>
 			<HEIGHT>-13</HEIGHT>
 			<WIDTH>6</WIDTH>
 			<WEIGHT>400</WEIGHT>
@@ -343,7 +353,7 @@ download the executable.-->
 					<POINT pos='7.60000,8.10000' arc='0'/>
 					<POINT pos='0.10000,8.10000' arc='0'/>
 				</POLYGON>
-				<TEXT pos='12.00000,8.50000' direction='0' font='3' color='000000'>+</TEXT>
+				<TEXT pos='12.00000,8.50000' direction='0' font='4' color='000000'>+</TEXT>
 			</TinyCAD>
 		</SYMBOLDEF>
 		<SYMBOLDEF id='6'>
@@ -490,17 +500,17 @@ download the executable.-->
 			<COLOR_NOTETEXT_TEXT>FF0000</COLOR_NOTETEXT_TEXT>
 		</OPTIONS>
 		<SYMBOL id='1' pos='186.00000,63.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-18.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U5' show='0' pos='-18.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='AND' show='0' pos='-15.00000,-10.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='-18.00000,4.40000'/>
 			<HINT pin='1' net='1'/>
 			<HINT pin='2' net='4'/>
-			<HINT pin='3' net='157'/>
+			<HINT pin='3' net='160'/>
 		</SYMBOL>
 		<SYMBOL id='2' pos='164.00000,66.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-16.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U6' show='0' pos='-16.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='OR' show='0' pos='-15.00000,-10.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -510,25 +520,25 @@ download the executable.-->
 			<HINT pin='3' net='4'/>
 		</SYMBOL>
 		<SYMBOL id='3' pos='207.00000,61.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-16.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U2' show='0' pos='-16.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='REG_SYNC' show='1' pos='-14.00000,3.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='-16.00000,4.40000'/>
 			<FIELD type='3' description='Name' value='done' show='1' pos='-14.00000,5.80000'/>
-			<HINT pin='1' net='157'/>
+			<HINT pin='1' net='160'/>
 			<HINT pin='2' net='5'/>
 			<HINT pin='3' net='8'/>
 		</SYMBOL>
 		<WIRE a='163.00000,36.00000' b='163.00000,55.00000'/>
 		<WIRE a='186.00000,58.00000' b='191.00000,58.00000'/>
 		<WIRE a='191.00000,53.00000' b='186.00000,53.00000'/>
-		<WIRE a='213.00000,72.00000' b='252.00000,72.00000'/>
+		<WIRE a='213.00000,72.00000' b='256.50000,72.00000'/>
 		<WIRE a='213.00000,72.00000' b='144.00000,72.00000'/>
 		<WIRE a='144.00000,72.00000' b='144.00000,64.00000'/>
-		<LABEL pos='146.00000,36.00000' direction='3' font='3' color='208000' style='1'>start</LABEL>
+		<LABEL pos='146.00000,36.00000' direction='3' font='4' color='208000' style='1'>start</LABEL>
 		<SYMBOL id='4' pos='239.00000,60.00000' part='0' rotate='7' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-17.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U3' show='0' pos='-17.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='INHIBIT' show='0' pos='-14.00000,-10.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -538,37 +548,37 @@ download the executable.-->
 			<HINT pin='3' net='9'/>
 		</SYMBOL>
 		<WIRE a='213.00000,58.00000' b='213.00000,72.00000'/>
-		<WIRE style='5' a='249.00000,55.00000' b='252.00000,55.00000'/>
+		<WIRE style='5' a='253.50000,55.00000' b='256.50000,55.00000'/>
 		<SYMBOL id='8' pos='131.00000,61.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-16.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U1' show='0' pos='-16.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='REG_SYNC' show='1' pos='-14.00000,3.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='3' description='Name' value='convert' show='1' pos='-14.00000,5.40000'/>
-			<HINT pin='1' net='156'/>
+			<HINT pin='1' net='159'/>
 			<HINT pin='2' net='5'/>
 			<HINT pin='3' net='3'/>
 			<HINT pin='4' net='9'/>
 		</SYMBOL>
-		<LABEL pos='252.00000,55.00000' direction='2' font='3' color='208000' style='2'>mem_en</LABEL>
-		<LABEL pos='252.00000,72.00000' direction='2' font='3' color='208000' style='2'>done</LABEL>
-		<LABEL pos='252.00000,84.00000' direction='2' font='3' color='208000' style='2'>mem_we</LABEL>
-		<WIRE a='137.00000,84.00000' b='252.00000,84.00000'/>
+		<LABEL pos='256.50000,55.00000' direction='2' font='4' color='208000' style='2'>mem_en</LABEL>
+		<LABEL pos='256.50000,72.00000' direction='2' font='4' color='208000' style='2'>done</LABEL>
+		<LABEL pos='256.50000,84.00000' direction='2' font='4' color='208000' style='2'>mem_we</LABEL>
+		<WIRE a='137.00000,84.00000' b='256.50000,84.00000'/>
 		<WIRE a='131.00000,58.00000' b='137.00000,58.00000'/>
 		<WIRE a='146.00000,36.00000' b='163.00000,36.00000'/>
 		<SYMBOL id='4' pos='111.00000,77.00000' part='0' rotate='4' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='1.00000,-15.00000'/>
+			<FIELD type='1' description='Ref' value='U7' show='0' pos='1.00000,-15.00000'/>
 			<FIELD type='0' description='Name' value='INHIBIT' show='0' pos='-14.00000,-10.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='1.00000,-12.60000'/>
 			<HINT pin='1' net='3'/>
 			<HINT pin='2' net='13'/>
-			<HINT pin='3' net='156'/>
+			<HINT pin='3' net='159'/>
 		</SYMBOL>
-		<SYMBOL id='8' pos='65.00000,96.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-16.00000,2.00000'/>
+		<SYMBOL id='8' pos='62.00000,96.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='U8' show='0' pos='-16.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='REG_SYNC' show='1' pos='-14.00000,3.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -582,8 +592,8 @@ download the executable.-->
 		<BUSSLASH pos='78.00000,89.00000' direction='0'/>
 		<WIRE style='4' a='85.00000,93.00000' b='74.00000,93.00000'/>
 		<WIRE a='78.00000,79.00000' b='78.00000,59.00000'/>
-		<SYMBOL id='4' pos='61.00000,61.00000' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-17.00000,2.00000'/>
+		<SYMBOL id='4' pos='58.00000,61.00000' part='0' rotate='6' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='U4' show='0' pos='-17.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='INHIBIT' show='0' pos='1.00000,-12.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -592,10 +602,10 @@ download the executable.-->
 			<HINT pin='2' net='9'/>
 			<HINT pin='3' net='18'/>
 		</SYMBOL>
-		<WIRE style='5' a='78.00000,53.00000' b='115.00000,53.00000'/>
-		<WIRE a='36.00000,88.00000' b='49.00000,88.00000'/>
-		<SYMBOL id='5' pos='75.00000,136.00000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-14.00000,2.00000'/>
+		<WIRE style='5' a='91.50000,53.00000' b='115.00000,53.00000'/>
+		<WIRE a='33.00000,88.00000' b='46.00000,88.00000'/>
+		<SYMBOL id='5' pos='72.00000,136.00000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+			<FIELD type='1' description='Ref' value='U11' show='0' pos='-14.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='ADD' show='0' pos='-14.00000,-19.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -605,12 +615,12 @@ download the executable.-->
 			<HINT pin='4' net='125'/>
 		</SYMBOL>
 		<WIRE style='4' a='85.00000,122.00000' b='85.00000,93.00000'/>
-		<WIRE style='3' a='61.00000,127.00000' b='36.00000,127.00000'/>
-		<WIRE style='3' a='36.00000,103.00000' b='36.00000,93.00000'/>
-		<WIRE style='3' a='36.00000,93.00000' b='49.00000,93.00000'/>
-		<WIRE style='4' a='65.00000,93.00000' b='74.00000,93.00000'/>
+		<WIRE style='3' a='58.00000,127.00000' b='33.00000,127.00000'/>
+		<WIRE style='3' a='33.00000,103.00000' b='33.00000,93.00000'/>
+		<WIRE style='3' a='33.00000,93.00000' b='46.00000,93.00000'/>
+		<WIRE style='4' a='62.00000,93.00000' b='74.00000,93.00000'/>
 		<SYMBOL id='6' pos='144.00000,107.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-14.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U9' show='0' pos='-14.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='MUX' show='0' pos='-14.00000,-19.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -623,7 +633,7 @@ download the executable.-->
 		<WIRE style='4' a='85.00000,93.00000' b='130.00000,93.00000'/>
 		<WIRE a='137.00000,79.00000' b='137.00000,58.00000'/>
 		<SYMBOL id='8' pos='187.00000,125.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-16.00000,2.00000'/>
+			<FIELD type='1' description='Ref' value='U10' show='0' pos='-16.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='REG_SYNC' show='1' pos='-14.00000,3.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -635,46 +645,44 @@ download the executable.-->
 			<HINT pin='4' net='9'/>
 		</SYMBOL>
 		<WIRE style='4' a='85.00000,122.00000' b='171.00000,122.00000'/>
-		<WIRE style='2' a='144.00000,98.00000' b='252.00000,98.00000'/>
-		<WIRE style='2' a='187.00000,122.00000' b='252.00000,122.00000'/>
-		<LABEL pos='252.00000,122.00000' direction='2' font='3' color='208000' style='2'>wz_id</LABEL>
-		<LABEL pos='252.00000,98.00000' direction='2' font='3' color='208000' style='2'>mem_addr</LABEL>
+		<WIRE style='2' a='144.00000,98.00000' b='256.50000,98.00000'/>
+		<WIRE style='2' a='187.00000,122.00000' b='256.50000,122.00000'/>
+		<LABEL pos='256.50000,122.00000' direction='2' font='4' color='208000' style='2'>wz_id</LABEL>
+		<LABEL pos='256.50000,98.00000' direction='2' font='4' color='208000' style='2'>mem_addr</LABEL>
 		<WIRE a='137.00000,88.00000' b='137.00000,84.00000'/>
-		<WIRE style='4' a='75.00000,122.00000' b='85.00000,122.00000'/>
-		<LABEL pos='130.00000,93.00000' direction='2' font='3' color='208000' style='0'>wz_id_st</LABEL>
-		<LABEL pos='78.00000,89.00000' direction='0' font='3' color='208000' style='0'>wz_id_st[log_Nwz]</LABEL>
-		<LABEL pos='100.00000,48.00000' direction='3' font='3' color='208000' style='1'>clk</LABEL>
-		<LABEL pos='100.00000,36.00000' direction='3' font='3' color='208000' style='1'>rst</LABEL>
+		<WIRE style='4' a='72.00000,122.00000' b='85.00000,122.00000'/>
+		<LABEL pos='62.00000,93.00000' direction='3' font='4' color='208000' style='0'>wz_id_st</LABEL>
+		<LABEL pos='78.00000,89.00000' direction='0' font='4' color='208000' style='0'>wz_id_st[log_Nwz]</LABEL>
+		<LABEL pos='100.00000,48.00000' direction='3' font='4' color='208000' style='1'>clk</LABEL>
+		<LABEL pos='100.00000,36.00000' direction='3' font='4' color='208000' style='1'>rst</LABEL>
 		<WIRE a='100.00000,48.00000' b='115.00000,48.00000'/>
 		<WIRE a='186.00000,53.00000' b='186.00000,41.00000'/>
 		<WIRE a='199.00000,48.00000' b='199.00000,41.00000'/>
-		<LABEL pos='199.00000,41.00000' direction='1' font='3' color='208000' style='0'>rst</LABEL>
-		<LABEL pos='186.00000,41.00000' direction='1' font='3' color='208000' style='0'>clk</LABEL>
+		<LABEL pos='199.00000,41.00000' direction='1' font='4' color='208000' style='0'>rst</LABEL>
+		<LABEL pos='186.00000,41.00000' direction='1' font='4' color='208000' style='0'>clk</LABEL>
 		<WIRE a='171.00000,112.00000' b='166.00000,112.00000'/>
 		<WIRE a='166.00000,112.00000' b='166.00000,102.00000'/>
 		<WIRE a='179.00000,107.00000' b='179.00000,102.00000'/>
-		<LABEL pos='179.00000,102.00000' direction='1' font='3' color='208000' style='0'>rst</LABEL>
-		<LABEL pos='166.00000,102.00000' direction='1' font='3' color='208000' style='0'>clk</LABEL>
+		<LABEL pos='179.00000,102.00000' direction='1' font='4' color='208000' style='0'>rst</LABEL>
+		<LABEL pos='166.00000,102.00000' direction='1' font='4' color='208000' style='0'>clk</LABEL>
 		<WIRE a='100.00000,36.00000' b='123.00000,36.00000'/>
 		<WIRE a='123.00000,36.00000' b='123.00000,43.00000'/>
-		<WIRE a='49.00000,83.00000' b='44.00000,83.00000'/>
-		<WIRE a='44.00000,83.00000' b='44.00000,71.00000'/>
-		<WIRE a='57.00000,78.00000' b='57.00000,71.00000'/>
-		<LABEL pos='57.00000,71.00000' direction='1' font='3' color='208000' style='0'>rst</LABEL>
-		<LABEL pos='44.00000,71.00000' direction='1' font='3' color='208000' style='0'>clk</LABEL>
-		<LABEL pos='239.00000,55.00000' direction='3' font='3' color='208000' style='0'>working</LABEL>
-		<LABEL pos='146.00000,117.00000' direction='3' font='3' color='208000' style='0'>working</LABEL>
-		<WIRE style='5' a='171.00000,117.00000' b='146.00000,117.00000'/>
+		<WIRE a='46.00000,83.00000' b='41.00000,83.00000'/>
+		<WIRE a='41.00000,83.00000' b='41.00000,71.00000'/>
+		<WIRE a='54.00000,78.00000' b='54.00000,71.00000'/>
+		<LABEL pos='54.00000,71.00000' direction='1' font='4' color='208000' style='0'>rst</LABEL>
+		<LABEL pos='41.00000,71.00000' direction='1' font='4' color='208000' style='0'>clk</LABEL>
+		<LABEL pos='239.00000,55.00000' direction='3' font='4' color='208000' style='0'>working</LABEL>
 		<SYMBOL id='7' pos='92.00000,134.00000' part='0' rotate='2' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
-			<FIELD type='1' description='Ref' value='U?' show='0' pos='-10.00000,4.40000'/>
+			<FIELD type='1' description='Ref' value='U12' show='0' pos='-10.00000,4.40000'/>
 			<FIELD type='0' description='Name' value='CONST' show='1' pos='-8.00000,-4.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='2' description='$$SPICE_EPILOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
 			<FIELD type='1' description='Package' value='package name for PCB layout' show='0' pos='-10.00000,6.80000'/>
-			<FIELD type='5' description='VALUE' value='1' show='1' pos='-8.00000,3.00000'/>
+			<FIELD type='5' description='VALUE' value='1' show='0' pos='-8.00000,3.00000'/>
 			<HINT pin='1' net='33'/>
 		</SYMBOL>
-		<WIRE a='75.00000,132.00000' b='82.00000,132.00000'/>
+		<WIRE a='72.00000,132.00000' b='82.00000,132.00000'/>
 		<WIRE a='137.00000,58.00000' b='149.00000,58.00000'/>
 		<WIRE a='144.00000,64.00000' b='149.00000,64.00000'/>
 		<WIRE a='163.00000,55.00000' b='169.00000,55.00000'/>
@@ -691,18 +699,14 @@ download the executable.-->
 		<JUNCTION pos='186.00000,58.00000'/>
 		<JUNCTION pos='213.00000,58.00000'/>
 		<JUNCTION pos='213.00000,72.00000'/>
-		<LABEL pos='61.00000,127.00000' direction='2' font='3' color='208000' style='0'>wz_id_incr</LABEL>
-		<LABEL pos='130.00000,103.00000' direction='2' font='3' color='208000' style='0'>wz_id_incr</LABEL>
+		<LABEL pos='58.00000,127.00000' direction='2' font='4' color='208000' style='0'>wz_id_incr</LABEL>
 		<JUNCTION pos='85.00000,122.00000'/>
 		<JUNCTION pos='85.00000,93.00000'/>
-		<WIRE style='3' a='87.00000,103.00000' b='130.00000,103.00000'/>
-		<WIRE style='3' a='36.00000,127.00000' b='36.00000,103.00000'/>
-		<WIRE style='3' a='36.00000,103.00000' b='83.00000,103.00000'/>
+		<WIRE style='3' a='33.00000,127.00000' b='33.00000,103.00000'/>
 		<WIRE style='5' a='78.00000,53.00000' b='78.00000,30.00000'/>
-		<WIRE style='5' a='78.00000,30.00000' b='249.00000,30.00000'/>
-		<WIRE style='5' a='249.00000,30.00000' b='249.00000,55.00000'/>
-		<JUNCTION pos='249.00000,55.00000'/>
-		<WIRE style='5' a='239.00000,55.00000' b='249.00000,55.00000'/>
+		<WIRE style='5' a='78.00000,30.00000' b='253.50000,30.00000'/>
+		<WIRE style='5' a='253.50000,30.00000' b='253.50000,55.00000'/>
+		<WIRE style='5' a='239.00000,55.00000' b='253.50000,55.00000'/>
 		<WIRE a='106.00000,60.00000' b='106.00000,58.00000'/>
 		<WIRE a='106.00000,58.00000' b='115.00000,58.00000'/>
 		<WIRE a='109.00000,77.00000' b='109.00000,79.00000'/>
@@ -714,13 +718,22 @@ download the executable.-->
 		<WIRE a='137.00000,84.00000' b='137.00000,79.00000'/>
 		<WIRE a='78.00000,89.00000' b='78.00000,79.00000'/>
 		<JUNCTION pos='78.00000,79.00000'/>
-		<WIRE a='78.00000,59.00000' b='61.00000,59.00000'/>
+		<WIRE a='78.00000,59.00000' b='58.00000,59.00000'/>
 		<WIRE style='5' a='78.00000,53.00000' b='78.00000,53.00000'/>
-		<WIRE style='5' a='78.00000,53.00000' b='61.00000,53.00000'/>
+		<WIRE style='5' a='78.00000,53.00000' b='58.00000,53.00000'/>
 		<JUNCTION pos='78.00000,53.00000'/>
-		<WIRE a='44.00000,56.00000' b='36.00000,56.00000'/>
-		<WIRE a='36.00000,56.00000' b='36.00000,88.00000'/>
-		<JUNCTION pos='36.00000,103.00000'/>
-		<TEXT pos='87.00000,133.50000' direction='3' font='0' color='000000'>1</TEXT>
+		<WIRE a='41.00000,56.00000' b='33.00000,56.00000'/>
+		<WIRE a='33.00000,56.00000' b='33.00000,88.00000'/>
+		<TEXT pos='87.00000,133.50000' direction='3' font='3' color='000000'>1</TEXT>
+		<WIRE style='5' a='171.00000,117.00000' b='91.50000,117.00000'/>
+		<WIRE style='5' a='91.50000,117.00000' b='91.50000,53.00000'/>
+		<WIRE style='5' a='78.00000,53.00000' b='91.50000,53.00000'/>
+		<BUSNAME pos='193.50000,122.00000' direction='3' font='0' color='208000'>log_Nwz+1</BUSNAME>
+		<BUSNAME pos='193.50000,98.00000' direction='3' font='0' color='208000'>log_Nwz+1</BUSNAME>
+		<WIRE style='3' a='33.00000,103.00000' b='130.00000,103.00000'/>
+		<JUNCTION pos='33.00000,103.00000'/>
+		<JUNCTION pos='91.50000,53.00000'/>
+		<LABEL pos='171.00000,117.00000' direction='2' font='4' color='208000' style='0'>working</LABEL>
+		<JUNCTION pos='253.50000,55.00000'/>
 	</TinyCAD>
 </TinyCADSheets>
