@@ -77,8 +77,18 @@ download the executable.-->
 			<SHEETS>1 of 1</SHEETS>
 			<SHOWS>0</SHOWS>
 			<DATE></DATE>
-			<GRID spacing='50.00000' snap='1'/>
+			<GRID spacing='25.00000' snap='1'/>
 		</DETAILS>
+		<FONT id='0'>
+			<HEIGHT>-13</HEIGHT>
+			<WIDTH>6</WIDTH>
+			<WEIGHT>400</WEIGHT>
+			<ITALIC>0</ITALIC>
+			<UNDERLINE>0</UNDERLINE>
+			<STRIKEOUT>0</STRIKEOUT>
+			<CHARSET>0</CHARSET>
+			<FACENAME>Arial</FACENAME>
+		</FONT>
 		<FONT id='1'>
 			<HEIGHT>-10</HEIGHT>
 			<WIDTH>0</WIDTH>
@@ -711,5 +721,6 @@ download the executable.-->
 		<WIRE a='44.00000,56.00000' b='36.00000,56.00000'/>
 		<WIRE a='36.00000,56.00000' b='36.00000,88.00000'/>
 		<JUNCTION pos='36.00000,103.00000'/>
+		<TEXT pos='87.00000,133.50000' direction='3' font='0' color='000000'>1</TEXT>
 	</TinyCAD>
 </TinyCADSheets>

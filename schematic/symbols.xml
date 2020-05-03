@@ -249,6 +249,11 @@ download the TinyCAD executable.-->
 				<DEFAULT>package name for PCB layout</DEFAULT>
 				<FT>000001</FT>
 			</FIELD>
+			<FIELD>
+				<NAME>Size</NAME>
+				<DEFAULT>..</DEFAULT>
+				<FT>000000</FT>
+			</FIELD>
 		</DETAILS>
 		<TinyCAD>
 			<FONT id='1'>
