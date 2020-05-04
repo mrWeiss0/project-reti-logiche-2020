@@ -22,7 +22,9 @@ These parameters can be specified:
 
 ``data_sz``         Size of the addresses used
 
-``log_Dwz``         The log2 of the working zone dimension
+``Dwz``             The working zone dimension
+
+``Nwz``             The number of working zones
 
 ``address_count``   Number of addresses tested in each test
 
@@ -33,6 +35,7 @@ These parameters can be specified:
                     a list of working zone base addresses, and optionally
                     ``address_in``, a list of addresses to test.
                     If omitted, ``address_in`` is randomly generated.
+                    Addresses can be integer or binary strings.
 """
 
 import random
@@ -54,10 +57,15 @@ def main():
         try:
             random.seed(section.get("seed"))
             data_sz       = int(section["data_sz"])
-            log_Dwz       = int(section["log_Dwz"])
+            Dwz           = int(section["Dwz"])
             address_count = int(section["address_count"])
+            max_Nwz = 2**(data_sz - 1 - Dwz)
+            Nwz           = section.getint("Nwz", max_Nwz)
 
-            g = TestGenerator(data_sz, log_Dwz, address_count)
+            if Nwz > max_Nwz:
+                raise ValueError(f"Nwz = {Nwz} exceedes maximum value {max_Nwz}")
+
+            g = TestGenerator(data_sz, Dwz, Nwz, address_count)
             user_tests = section.getjson("user_tests", [])
             generated_count = section.getint("generated_count", 0)
             tests = list(g.mergedTests(user_tests, generated_count))
@@ -70,7 +78,8 @@ def main():
                     clock_period = section["clock_period"],
                     mem_delay = section["mem_delay"],
                     data_sz = data_sz,
-                    log_Dwz = log_Dwz,
+                    Dwz = Dwz,
+                    Nwz = Nwz,
                     address_count = address_count,
                     reset_count = len(tests),
                     test_data = toVHDL(tests or (g.emptyTest(),), data_sz,
@@ -89,12 +98,12 @@ package test_data is
     constant clock_period  : time     := {clock_period};
     constant mem_delay     : time     := {mem_delay};
     constant data_sz       : positive := {data_sz};
-    constant log_Dwz       : natural  := {log_Dwz};
-    constant log_Nwz       : natural  := work.common.log_Nwz(log_Dwz, data_sz);
+    constant Dwz           : positive := {Dwz};
+    constant Nwz           : positive := {Nwz};
     constant address_count : natural  := {address_count};
     constant reset_count   : natural  := {reset_count};
 
-    type wz_base_array is array (0 to 2 ** log_Nwz - 1) of std_logic_vector(data_sz - 1 downto 0);
+    type wz_base_array is array (0 to Nwz - 1) of std_logic_vector(data_sz - 1 downto 0);
     type test_address_r is record
         address, expected  : std_logic_vector(data_sz - 1 downto 0);
     end record test_address_r;
@@ -148,14 +157,10 @@ def _samplesRangeDist(n, k, d = 1):
 class TestGenerator:
     """This class builds tests, either randomly generated or from user data."""
 
-    def __init__(self, data_sz, log_Dwz, address_count):
+    def __init__(self, data_sz, Dwz, Nwz, address_count):
         """Initialize an instance"""
-        self.data_sz, self.log_Dwz = data_sz, log_Dwz
+        self.data_sz, self.Dwz, self.Nwz = data_sz, Dwz, Nwz
         self.address_count = address_count
-
-        self.Dwz = 2**self.log_Dwz
-        self.log_Nwz = self.data_sz - 1 - self.Dwz
-        self.Nwz = 2**self.log_Nwz
         self.addressRange = 2**(self.data_sz - 1)
         self.wz_base_gen = _samplesRangeDist(2**(self.data_sz - 1) - self.Dwz + 1, self.Nwz, self.Dwz)
 

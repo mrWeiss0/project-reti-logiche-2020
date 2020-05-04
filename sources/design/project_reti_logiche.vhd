@@ -23,19 +23,20 @@ end project_reti_logiche;
 
 architecture structural of project_reti_logiche is
     constant data_sz : positive := o_data'length;
-    constant log_Dwz : natural := 2;
-    constant log_Nwz : natural := log_Nwz(log_Dwz, data_sz);
+    constant Dwz : positive := 4;
+    constant Nwz : positive := 8;
     component main is
         generic(
             data_sz : positive := data_sz;
-            log_Dwz : natural := log_Dwz
+            Dwz : positive := Dwz;
+            Nwz : positive := Nwz
         );
         port(
             clk, rst : in  std_logic;
             start    : in  std_logic;
-            data_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
+            data_in  : in  std_logic_vector(data_sz - 2 downto 0);
             done     : out std_logic;
-            mem_addr : out std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
+            mem_addr : out std_logic_vector(log2(Nwz + 2) - 1 downto 0);
             mem_en   : out std_logic;
             mem_we   : out std_logic;
             data_out : out std_logic_vector(data_sz - 1 downto 0)
@@ -43,15 +44,15 @@ architecture structural of project_reti_logiche is
     end component;
 
     begin
-        o_address(o_address'high downto log_Nwz + 1) <= (others => '0');
+        o_address(o_address'high downto log2(Nwz + 2)) <= (others => '0');
         main_u : main
             port map(
                 clk      => i_clk,
                 rst      => i_rst,
                 start    => i_start,
-                data_in  => i_data(data_sz - 1 - 1 downto 0),
+                data_in  => i_data(data_sz - 2 downto 0),
                 done     => o_done,
-                mem_addr => o_address(log_Nwz + 1 - 1 downto 0),
+                mem_addr => o_address(log2(Nwz + 2) - 1 downto 0),
                 mem_en   => o_en,
                 mem_we   => o_we,
                 data_out => o_data

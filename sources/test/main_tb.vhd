@@ -11,14 +11,15 @@ architecture test of main_tb is
     component main is
         generic(
             data_sz : positive := data_sz;
-            log_Dwz : natural := log_Dwz
+            Dwz : positive := Dwz;
+            Nwz : positive := Nwz
         );
         port(
             clk, rst : in  std_logic;
             start    : in  std_logic;
-            data_in  : in  std_logic_vector(data_sz - 1 - 1 downto 0);
+            data_in  : in  std_logic_vector(data_sz - 2 downto 0);
             done     : out std_logic;
-            mem_addr : out std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
+            mem_addr : out std_logic_vector(log2(Nwz + 2) - 1 downto 0);
             mem_en   : out std_logic;
             mem_we   : out std_logic;
             data_out : out std_logic_vector(data_sz - 1 downto 0)
@@ -30,7 +31,7 @@ architecture test of main_tb is
     signal rst, start : std_logic := '0';
     signal data_in : std_logic_vector(data_sz - 1 downto 0) := (others => '0');
     signal done : std_logic;
-    signal mem_addr : std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
+    signal mem_addr : std_logic_vector(log2(Nwz + 2) - 1 downto 0);
     signal mem_en, mem_we : std_logic;
     signal data_out : std_logic_vector(data_sz - 1 downto 0);
     
@@ -68,7 +69,7 @@ architecture test of main_tb is
                 clk      => clk,
                 rst      => rst,
                 start    => start,
-                data_in  => data_in(data_sz - 1 - 1 downto 0),
+                data_in  => data_in(data_sz - 2 downto 0),
                 done     => done,
                 mem_addr => mem_addr,
                 mem_en   => mem_en,

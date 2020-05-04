@@ -18,63 +18,69 @@ use work.common.all;
 
 entity control is
     generic(
-        log_Nwz : natural
+        Nwz : positive
     );
     port(
         clk, rst : in  std_logic;
         start    : in  std_logic;
         done     : out std_logic;
-        wz_id    : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
-        mem_addr : out std_logic_vector(max(log_Nwz + 1, 2) - 1 downto 0);
+        wz_id    : out std_logic_vector(log2(Nwz) - 1 downto 0);
+        convert  : out std_logic;
+        mem_addr : out std_logic_vector(log2(Nwz + 2) - 1 downto 0);
         mem_en   : out std_logic;
         mem_we   : out std_logic
     );
 end control;
 
 architecture structural of control is
-    signal working, done_s, convert : std_logic;
-    signal wz_id_st : unsigned(wz_id'range);
+    signal working_s, convert_s, write_s, done_s : std_logic;
+    signal wz_id_st : unsigned(log2(Nwz + 1) - 1 downto 0);
     signal wz_id_incr, wz_id_pad : unsigned(mem_addr'range);
     signal wz_id_cur : std_logic_vector(wz_id'range);
+    signal all_wz : std_logic;
     
     begin
-        working <= start and not done_s;
+        working_s <= start and not done_s;
         done <= done_s;
         wz_id <= wz_id_cur;
-        wz_id_pad(mem_addr'high downto wz_id_st'high + 1) <= (others => '0');
+        wz_id_pad(wz_id_pad'high downto wz_id_st'high + 1) <= (others => '0');
         wz_id_pad(wz_id_st'range) <= wz_id_st;
         wz_id_incr <= wz_id_pad + 1;
+        all_wz <= '1' when to_integer(wz_id_st) >= Nwz else '0';
         mem_addr <=
-            std_logic_vector(wz_id_incr) when convert = '1' else
+            std_logic_vector(wz_id_incr) when write_s = '1' else
             std_logic_vector(wz_id_pad);
-        mem_en <= working;
-        mem_we <= convert;
+        mem_en <= working_s;
+        mem_we <= write_s;
+        convert <= convert_s;
         process(clk) is
             begin
                 if rising_edge(clk) then
                     -- working zone id increment
                     if rst = '1' then
                         wz_id_st <= (others => '0');
-                    elsif (working and not wz_id_st(wz_id_st'high)) = '1' then
+                    elsif (working_s and not all_wz) = '1' then
                         wz_id_st <= wz_id_incr(wz_id_st'range);
                     end if;
                     -- working zone id delay
                     if rst = '1' then
                         wz_id_cur <= (others => '0');
-                    elsif working = '1' then
-                        wz_id_cur <= std_logic_vector(wz_id_st);
+                        convert_s <= '0';
+                    elsif working_s = '1' then
+                        wz_id_cur <= std_logic_vector(wz_id_st(wz_id_cur'range));
+                        convert_s <= all_wz;
                     end if;
-                    -- convert trigger
+                    -- write trigger
                     if rst = '1' then
-                        convert <= '0';
-                    elsif working = '1' then
-                        convert <= wz_id_st(wz_id_st'high) and not convert;
+                        write_s <= '0';
+                    elsif working_s = '1' then
+                        write_s <= all_wz and not write_s;
                     end if;
                     -- done trigger
                     if rst = '1' then
                         done_s <= '0';
                     else
-                        done_s <= start and (convert or done_s);
+                        done_s <= start and (write_s or done_s);
                     end if;
                 end if;
         end process;

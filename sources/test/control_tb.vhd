@@ -1,30 +1,33 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use work.common.all;
 
 entity control_tb is
 end control_tb;
 
 architecture test of control_tb is
     constant clk_period : time := 100 ns;
-    constant log_Nwz : natural := 2;
+    constant Nwz : positive := 4;
     component control is
         generic(
-            log_Nwz : natural := log_Nwz
+            Nwz : positive := Nwz
         );
         port(
             clk, rst : in  std_logic;
             start    : in  std_logic;
             done     : out std_logic;
-            wz_id    : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
-            mem_addr : out std_logic_vector(log_Nwz + 1 - 1 downto 0);
+            wz_id    : out std_logic_vector(log2(Nwz) - 1 downto 0);
+            convert  : out std_logic;
+            mem_addr : out std_logic_vector(log2(Nwz + 2) - 1 downto 0);
             mem_en   : out std_logic;
             mem_we   : out std_logic
         );
     end component;  
     signal clk, rst, start : std_logic := '0';
-    signal done : std_logic;
+    signal done, convert : std_logic;
     signal mem_en, mem_we : std_logic;
-    signal wz_id, mem_addr : std_logic_vector(log_Nwz + 1 - 1  downto 0);
+    signal wz_id : std_logic_vector(log2(Nwz) - 1 downto 0);
+    signal mem_addr : std_logic_vector(log2(Nwz + 2) - 1 downto 0);
     
     begin
         clk <= not clk after clk_period / 2;
@@ -35,6 +38,7 @@ architecture test of control_tb is
                 start => start,
                 done => done,
                 wz_id => wz_id,
+                convert => convert,
                 mem_addr => mem_addr,
                 mem_en => mem_en,
                 mem_we => mem_we
