@@ -1,0 +1,31 @@
+/**
+ * Style rules for rendering in browser
+ * with a look similar to the printed version
+ */
+
+html {
+    background-color: #444;
+    padding: 80px 4px 6px;
+}
+
+body {
+    background-color: #fff;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 64px 8%;
+    border: 1px solid #333;
+    font-size: 16pt;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-top: 8em;
+}
+
+a[href]:hover {
+    text-decoration: underline;
+}
+
+#abstract {
+    max-width: 160mm;
+}
