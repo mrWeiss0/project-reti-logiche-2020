@@ -65,6 +65,10 @@ p {
     orphans: 5;
 }
 
+.avoidwrap{
+    display: inline-block;
+}
+
 /* Cover */
 
 #cover {
@@ -81,7 +85,7 @@ p {
 
 #cover #title2 {
     font-family: Ubuntu Condensed;
-    font-size: 1.4em;
+    font-size: 1.35em;
     margin: .8em 0;
 }
 
