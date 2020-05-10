@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 997.9288 544.1645">
+  <path d="M639.6846 124.9646h0l1.28-.16 1.28-.16 1.28-.32 1.28-.48 1.28-.64 1.12-.64 1.28-.8 1.12-.8.96-.96 1.12-.96.8-1.12.96-1.12.8-1.28.64-1.28.64-1.28.48-1.28.48-1.44.32-1.44.16-1.44v-1.28h0v-1.44l-.16-1.44-.32-1.44-.48-1.28-.48-1.44-.64-1.28-.64-1.28-.8-1.12-.96-1.28-.8-1.12-1.12-.96-.96-.96-1.12-.8-1.28-.8-1.12-.64-1.28-.64-1.28-.48-1.28-.32-1.28-.16h-25.44V124.9646h24.16" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M610.8846 94.7246h4.64M604.1645 94.7246h6.72M610.8846 117.2846h4.64M604.1645 117.2846h6.72M661.6045 106.0846h-4.64M668.3246 106.0846h-6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M532.4846 136.1645h3.04l3.04-.16 3.2-.32 2.88-.48 3.04-.64 2.88-.64 2.72-.8 2.72-.8 2.56-.96 2.4-.96 2.24-1.12 2.08-1.28 1.92-1.12 1.76-1.28 1.44-1.28 1.28-1.44.96-1.28.64-1.44.48-1.44.16-1.44h0l-.16-1.28-.48-1.44-.64-1.44-.96-1.44-1.28-1.28-1.44-1.28-1.76-1.28-1.92-1.28-2.08-1.12-2.24-1.12-2.4-.96-2.56-.96-2.72-.8-2.72-.8-2.88-.64-3.04-.64-2.88-.48-3.2-.32-3.04-.16-3.04-.16h0l.64.16.8.16.8.32.8.48.64.64.8.64.64.8.64.8.64.96.64.96.64 1.12.48 1.12.48 1.28.48 1.28.32 1.28.32 1.28.16 1.44.32 1.44v1.44l.16 1.28h0l-.16 1.44v1.44l-.32 1.44-.16 1.28-.32 1.44-.32 1.28-.48 1.28-.48 1.12-.48 1.28-.64 1.12-.64.96-.64.96-.64.8-.64.8-.8.64-.64.64-.8.48-.8.32-.8.16h-.64" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M535.3646 106.0846h4.64M528.6445 106.0846h6.72M535.3646 128.6446h4.64M528.6445 128.6446h6.72M578.5646 117.2846h-4.64M585.2845 117.2846h-6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M740.0046 75.8446h-45.28v41.28h45.28z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M690.2446 106.0846h4.48M687.2046 106.0846h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(696.3246 108.8046)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">D</tspan>
+  </text>
+  <path d="M690.2446 87.2046h4.48M694.7245 84.8046v5.28M694.7245 84.8046l4.64 2.4M699.3646 87.2046l-4.64 2.88M687.2046 87.2046h3.04M744.6445 106.0846h-4.48M747.6846 106.0846h-3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(732.6445 108.8046)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">Q</tspan>
+  </text>
+  <path d="M717.4446 71.2046v4.64M717.4446 68.3246v2.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="rotate(-90 406.2706 -313.914) scale(.02295)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 235.9296 452.19839">RST</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(694.7245 127.0446)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 10.393502 16.334074 20.469913 25.432922 30.395931 35.826424">REG_SYNC</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(694.7245 137.6046)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 4.1358404 8.3179445 12.604179 16.786283 21.147717">done_s</tspan>
+  </text>
+  <path d="M581.4446 5.9246v88.8M668.3246 106.0846h18.88M687.2046 87.2046h-18.88M770.2446 194.7246h164.32M770.2446 194.7246h-260.48M509.7646 194.7246v-66.08" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M.3246.3246h22.56M.3246 11.6846h22.56M22.8846 11.6846l11.04-5.6M33.9246 6.0846l-11.04-5.76M.3246 11.6846V.3246" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 2.5657 9.602)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 258.86719 439.09119 553.77917">start</tspan>
+  </text>
+  <path d="M35.3646 4.4846h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M839.8445 75.8446h1.28l1.28.32 1.28.32 1.28.32 1.28.64 1.12.64 1.28.8.96.8 1.12.96.96 1.12.96 1.12.96 1.12.8 1.12.64 1.28.64 1.28.48 1.44.48 1.28.32 1.44.16 1.44v1.44h0v1.44l-.16 1.28-.32 1.44-.48 1.44-.48 1.28-.64 1.28-.64 1.28-.8 1.28-.96 1.12-.96 1.12-.96.96-1.12.96-.96.96-1.28.64-1.12.8-1.28.48-1.28.48-1.28.32-1.28.16-1.28.16h-24.16v-37.76h24.16" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M815.5245 105.6046c0-1.41-1-2.56-2.24-2.56-1.24 0-2.24 1.15-2.24 2.56 0 1.41 1 2.56 2.24 2.56 1.24 0 2.24-1.15 2.24-2.56zM804.3246 106.0846h6.72M811.0446 83.3646h4.64M804.3246 83.3646h6.72M861.7646 94.7246h-4.64M868.4846 94.7246h-6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M770.2446 106.0846v88.64" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M868.4846 94.7246h66.08" fill="none" stroke="green" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M452.9645 56.9646h-45.12v60.16h45.12z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M403.2046 106.0846h4.64M400.3245 106.0846h2.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(409.2845 108.8046)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">D</tspan>
+  </text>
+  <path d="M403.2046 68.3246h4.64M407.8446 65.9246v5.28M407.8446 65.9246l4.48 2.4M412.3245 68.3246l-4.48 2.88M400.3245 68.3246h2.88M457.6045 106.0846h-4.48M460.6445 106.0846h-3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(445.7646 108.8046)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">Q</tspan>
+  </text>
+  <path d="M403.2046 87.2046h4.64M400.3245 87.2046h2.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(409.2845 89.9246)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan y="0" x="0 5.4304938">CE</tspan>
+  </text>
+  <path d="M430.4046 52.3246v4.64M430.4046 49.4446v2.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.02295 .02295 0 433.1181 73.4414)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 235.9296 452.19839">RST</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(407.8446 127.0446)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 10.393502 16.334074 20.469913 25.432922 30.395931 35.826424">REG_SYNC</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(407.8446 136.1645)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.2637968 7.8204985 9.6252289 11.655551 16.016983 20.152822">write_s</tspan>
+  </text>
+  <path d="M977.2846 88.9646h-42.72M977.2846 100.3246h-42.72M934.5646 100.3246v-11.36M977.2846 88.9646l11.04 5.92M988.3246 94.8845l-11.04 5.44" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 937.109 98.2422)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 275.25119 458.75198 737.27997 924.05756 1110.8352">mem_en</tspan>
+  </text>
+  <path d="M935.8446 93.1246h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M960.1646 189.1246h-25.6M960.1646 200.4845h-25.6M934.5646 200.4845v-11.36M960.1646 189.1246l10.88 5.76M971.0446 194.8846l-10.88 5.6" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 937.27 198.4002)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 180.224 367.00159 553.77917">done</tspan>
+  </text>
+  <path d="M935.8446 193.2846h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M979.0446 243.8446h-44.48M979.0446 255.2046h-44.48M934.5646 255.2046v-11.36M979.0446 243.8446l10.88 5.76M989.9246 249.6046l-10.88 5.6" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 937.27 253.1242)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 275.25119 458.75198 737.27997 924.05756 1163.2639">mem_we</tspan>
+  </text>
+  <path d="M935.8446 248.0046h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M483.3646 249.4446h451.2M460.6445 106.0846h22.72M33.9246 5.9246h547.52" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M347.3646 142.2446h0l.16-1.28.16-1.28.32-1.28.48-1.28.48-1.28.8-1.12.64-1.28.96-1.12.96-.96.96-1.12 1.12-.8 1.12-.96 1.28-.8 1.28-.64 1.28-.64 1.28-.48 1.44-.48 1.44-.32 1.28-.16h2.88l1.44.16 1.44.32 1.28.48 1.44.48 1.28.64 1.28.64 1.12.8 1.12.96 1.12.8 1.12 1.12.96.96.8 1.12.8 1.28.64 1.12.64 1.28.32 1.28.32 1.28.32 1.28v25.44H347.3646v-24.16" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M379.6846 168.6446c0-1.23-1.14-2.24-2.56-2.24-1.42 0-2.56 1.01-2.56 2.24 0 1.23 1.14 2.24 2.56 2.24 1.42 0 2.56-1.01 2.56-2.24zM377.6045 177.7646v-6.72M354.8845 171.0446v-4.64M354.8845 177.7646v-6.72M366.2446 120.3246v4.64M366.2446 113.6046v6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M145.2846 181.6046h-45.28v60.16h45.28z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M95.5246 230.5646h4.48M92.4846 230.5646h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(101.6045 233.4446)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">D</tspan>
+  </text>
+  <path d="M95.5246 192.8045h4.48M100.0046 190.5646v5.28M100.0046 190.5646l4.64 2.24M104.6446 192.8045l-4.64 3.04M92.4846 192.8045h3.04M149.9246 230.5646h-4.48M152.9645 230.5646h-3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(137.9246 233.4446)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">Q</tspan>
+  </text>
+  <path d="M95.5246 211.6846h4.48M92.4846 211.6846h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(101.6045 214.5646)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan y="0" x="0 5.4304938">CE</tspan>
+  </text>
+  <path d="M122.7246 176.9646v4.64M122.7246 173.9245v3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="rotate(-90 161.7676 36.3267) scale(.02295)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 235.9296 452.19839">RST</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(100.0046 251.6846)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 10.393502 16.334074 20.469913 25.432922 30.395931 35.826424">REG_SYNC</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(100.0046 260.8045)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.2637968 8.9484549 13.309887 15.03942 19.175261 23.536692 27.371744 29.46096 31.491282 33.296013 37.582249 41.764351 45.900192 48.456894 53.946281 59.210079 63.045132 67.331367 71.692795 74.249496 76.806198 80.942039 83.197952 87.333794">wz_id_st[log2(Nwz+1)-1:0]</tspan>
+  </text>
+  <path d="M196.3245 230.5646h-43.36" fill="none" stroke="#0000a0" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M102.2446 79.5246h0l-1.28.16-1.28.16-1.28.32-1.28.48-1.28.64-1.12.64-1.12.8-1.12.8-1.12.96-.96.96-.96 1.12-.96 1.12-.64 1.28-.8 1.28-.64 1.28-.48 1.28-.48 1.44-.16 1.44-.32 1.44v1.28h0v1.44l.32 1.44.16 1.44.48 1.28.48 1.44.64 1.28.8 1.28.64 1.12.96 1.28.96 1.12.96.96 1.12.96 1.12.8 1.12.8 1.12.64 1.28.64 1.28.48 1.28.32 1.28.16h25.6V79.5245h-24.32" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M130.8846 109.2846c0-1.41-.96-2.56-2.16-2.56-1.2 0-2.16 1.15-2.16 2.56 0 1.41.96 2.56 2.16 2.56 1.2 0 2.16-1.15 2.16-2.56zM137.7646 109.7646h-6.72M131.0445 87.2046h-4.48M137.7646 87.2046h-6.72M80.4846 98.4046h4.48M73.6045 98.4046h6.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M260.4846 87.2046h139.84" fill="none" stroke="green" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M43.3646 211.6846h49.12" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M157.4446 409.9245h-4.48M164.3245 409.9245h-6.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(146.4046 412.8045)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">A</tspan>
+  </text>
+  <path d="M157.4446 447.6846h-4.48M164.3245 447.6846h-6.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(146.4046 450.5646)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">B</tspan>
+  </text>
+  <path d="M118.2446 428.8045h4.48M111.3646 428.8045h6.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M152.9645 394.8846l-30.24 15.04v37.76l30.24 15.2v-28.32l-13.28-5.76 13.28-5.6v-28.32" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 131.8395 432.4835)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">+</tspan>
+  </text>
+  <path d="M196.3245 294.8846v-64.32" fill="none" stroke="#0000a0" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M111.3646 428.8045h-68M43.3646 332.6445v-102.08M43.3646 230.5646h49.12" fill="none" stroke="#0080ff" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M468.1645 279.5245v68l30.24-15.04v-37.76l-30.24-15.2" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M463.6846 294.8846h4.48M456.9645 294.8846h6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(469.7646 297.6046)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">0</tspan>
+  </text>
+  <path d="M463.6846 332.6445h4.48M456.9645 332.6445h6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(469.7646 335.3646)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">1</tspan>
+  </text>
+  <path d="M503.0446 313.7646h-4.64M509.7646 313.7646h-6.72M483.3646 282.7246v4.48M483.3646 276.0046v6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="rotate(-90 394.4984 -91.5871) scale(.02295)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 216.2688 432.5376">SEL</tspan>
+  </text>
+  <path d="M483.3646 194.7246v-88.64" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M772.0046 360.9646h-45.12v60.16h45.12z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M722.4045 409.9245h4.48M719.3646 409.9245h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(728.3246 412.8045)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">D</tspan>
+  </text>
+  <path d="M722.4045 372.1646h4.48M726.8846 369.9245v5.28M726.8846 369.9245l4.48 2.24M731.3646 372.1646l-4.48 3.04M719.3646 372.1646h3.04M776.8046 409.9245h-4.64M779.6846 409.9245h-2.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(764.8046 412.8045)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">Q</tspan>
+  </text>
+  <path d="M722.4045 391.0446h4.48M719.3646 391.0446h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(728.3246 393.9245)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan y="0" x="0 5.4304938">CE</tspan>
+  </text>
+  <path d="M749.6045 356.3246v4.64M749.6045 353.2846v3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="rotate(-90 564.83 -187.3436) scale(.02295)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 235.9296 452.19839">RST</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(726.8846 431.0445)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 10.393502 16.334074 20.469913 25.432922 30.395931 35.826424">REG_SYNC</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(726.8846 440.1645)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.2637968 8.9484549 13.309887 15.03942 19.175261 23.536692 27.371744 31.507586 34.064285 36.153503 37.883038 42.244469 46.38031 50.741741 53.298443 58.728935 63.992733 67.677391 70.234093 72.790794 77.152222 79.182549 83.543976">wz_id_cur[log2(Nwz)-1:0]</tspan>
+  </text>
+  <path d="M509.7646 313.7646h424.8M779.6846 409.9245h154.88" fill="none" stroke="#0000a0" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M963.3645 404.3246h-28.8M963.3645 415.6846h-28.8M934.5646 415.6846v-11.36M963.3645 404.3246l11.04 5.76M974.4046 410.0846l-11.0401 5.6" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 937.109 413.5998)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 239.20639 403.04639 589.82397 661.91357">wz_id</tspan>
+  </text>
+  <path d="M935.8446 408.4845h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M986.5646 308.0046h-52M986.5646 319.3646h-52M934.5646 319.3646v-11.36M986.5646 308.0046l11.04 5.92M997.6047 313.9245l-11.0401 5.44" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 937.27 317.284)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 275.25119 458.75198 737.27997 924.05756 1110.8352 1297.6128 1477.8368">mem_addr</tspan>
+  </text>
+  <path d="M935.8446 312.1646h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M483.3646 249.4446v-54.72" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M196.3245 409.9245h523.04" fill="none" stroke="#0000a0" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 152.9607 228.48)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 239.20639 403.04639 589.82397 661.91357 848.69116 1032.192 1199.3087">wz_id_st</tspan>
+  </text>
+  <path d="M154.2446 229.1246h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M317.4445 62.5646h15.2M317.4445 73.9246h15.2M332.6446 73.9246l11.04-5.44M343.6846 68.4846l-11.04-5.92M317.4445 73.9246v-11.36" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 319.6809 71.8455)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 239.20639">clk</tspan>
+  </text>
+  <path d="M344.9646 66.7246h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M318.5646 17.2846h14.08M318.5646 28.6446h14.08M332.6446 28.6446l11.04-5.6M343.6846 23.0446l-11.04-5.76M318.5646 28.6446v-11.36" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 320.799 26.5628)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 108.1344 275.25119">rst</tspan>
+  </text>
+  <path d="M344.9646 21.4446h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M343.6846 68.3246h56.64M668.3246 87.2046v-45.44M717.4446 68.3246v-26.56" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 715.203 53.1221)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 108.1344 275.25119">rst</tspan>
+  </text>
+  <path d="M718.7245 40.3246h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 666.0816 54.2421)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 239.20639">clk</tspan>
+  </text>
+  <path d="M669.7646 40.3246h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M719.3646 372.1646h-18.88M700.4846 372.1646v-43.36M749.6045 353.2846v-24.48" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 747.3588 340.1613)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 108.1344 275.25119">rst</tspan>
+  </text>
+  <path d="M750.8846 327.3646h-2.88v2.72h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 698.2404 341.2794)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 239.20639">clk</tspan>
+  </text>
+  <path d="M701.7646 327.3646h-2.88v2.72h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M343.6846 22.8845h86.72M430.4046 22.8845v26.56M92.4846 192.8045h-18.88M73.6045 192.8045v-45.28M122.7246 173.9245v-26.4" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 120.4835 158.8813)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 108.1344 275.25119">rst</tspan>
+  </text>
+  <path d="M124.0046 146.0846h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 71.3645 160.0013)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 239.20639">clk</tspan>
+  </text>
+  <path d="M75.0445 146.0846h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 868.4729 92.6426)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 239.20639 422.70718 530.84161 697.95837 773.32477 956.82556">working</tspan>
+  </text>
+  <path d="M869.7646 93.1246h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M245.2845 440.1645h-30.08v15.04h30.08z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M210.7245 447.6846h4.48M207.6846 447.6846h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(215.2046 438.5646)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 11.371064 16.801558 21.764566">CONST</tspan>
+  </text>
+  <path d="M164.3245 447.6846h43.36" fill="none" stroke="#00f" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M483.3646 106.0846h45.28M509.7646 128.6446h18.88M581.4446 94.7246h22.72M585.2845 117.2846h18.88M664.6445 106.0846h3.68M770.2446 106.0846h34.08M747.6846 106.0846h22.56M581.4446 5.9246h188.8M770.2446 5.9246v77.44M804.3246 83.3646h-34.08" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 62.8813 426.7201)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 239.20639 403.04639 589.82397 661.91357 848.69116 1032.192 1104.2816 1291.0592 1458.176">wz_id_incr</tspan>
+  </text>
+  <path d="M112.8046 427.3646h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M260.4846 87.2046v-51.04" fill="none" stroke="green" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M366.2446 113.6046v-7.52M366.2446 106.0846h34.08M377.6045 177.7646v16.96M377.6045 194.7246h105.76M260.4846 109.7646h-122.72" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M260.4846 87.2046h-122.72" fill="none" stroke="green" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M73.6045 98.4046h-30.24M43.3646 98.4046v113.28" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 226.5624 451.3642)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">1</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 855.1916 407.8454)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 72.0896 258.86719 439.09119 625.86877 737.27997 976.48639 1218.9696 1386.0864">log2(Nwz)</tspan>
+  </text>
+  <path d="M909.1246 402.4046l-15.04 15.2" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 843.9918 311.6845)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 72.0896 258.86719 439.09119 625.86877 737.27997 976.48639 1218.9696 1386.0864 1576.1407 1762.9183">log2(Nwz+2)</tspan>
+  </text>
+  <path d="M909.6045 306.0846l-15.04 15.2" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M274.8845 230.5646h4.48M268.1645 230.5646h6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(280.9646 233.4446)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">A</tspan>
+  </text>
+  <path d="M274.8845 268.3246h4.48M268.1645 268.3246h6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(280.9646 271.2046)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">B</tspan>
+  </text>
+  <path d="M314.2446 249.4446h-4.64M320.9646 249.4446h-6.72" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M279.3646 215.5246l30.24 15.04v37.76l-30.24 15.2v-28.32l13.28-5.76-13.28-5.6v-28.32" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 294.5587 253.1242)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">≥</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(268.1645 212.0046)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.9405708 10.53391">GTE</tspan>
+  </text>
+  <path d="M237.7646 260.8045h-30.08v15.04h30.08z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M242.4046 268.3246h-4.48M245.4445 268.3246h-3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(207.6846 259.2046)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 11.371064 16.801558 21.764566">CONST</tspan>
+  </text>
+  <path d="M245.4445 268.3246h22.72" fill="none" stroke="#00f" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 213.2812 272.002)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 239.20639 475.13599">Nwz</tspan>
+  </text>
+  <path d="M724.8046 457.1246h-45.12v60.32h45.12z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M675.2046 506.2446h4.48M672.1645 506.2446h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(681.1246 509.1246)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">D</tspan>
+  </text>
+  <path d="M675.2046 468.4845h4.48M679.6846 466.2446v5.28M679.6846 466.2446l4.48 2.24M684.1645 468.4845l-4.48 3.04M672.1645 468.4845h3.04M729.6045 506.2446h-4.64M732.4846 506.2446h-2.88" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(717.6045 509.1246)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan style="-inkscape-font-specification:sans-serif" y="0" x="0">Q</tspan>
+  </text>
+  <path d="M675.2046 487.3646h4.48M672.1645 487.3646h3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(681.1246 490.2446)" font-weight="400" font-size="7.5197" font-family="sans-serif">
+    <tspan y="0" x="0 5.4304938">CE</tspan>
+  </text>
+  <path d="M702.4045 452.6446v4.48M702.4045 449.6045v3.04" fill="none" stroke="#c04040" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="rotate(-90 589.387 -115.579) scale(.02295)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 235.9296 452.19839">RST</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(679.6846 527.3646)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 5.4304938 10.393502 16.334074 20.469913 25.432922 30.395931 35.826424">REG_SYNC</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="translate(679.6846 534.8846)" font-weight="400" font-size="7.5197" font-family="sans-serif" fill="#c04040">
+    <tspan y="0" x="0 3.835052 7.9708924 12.152997 16.138443 20.320547 22.877249 24.966465 29.102306">convert_s</tspan>
+  </text>
+  <path d="M196.3245 230.5646h71.84" fill="none" stroke="#0000a0" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M43.3646 428.8045v-96.16M43.3646 332.6445h413.6" fill="none" stroke="#0080ff" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M456.9645 294.8846h-260.64M196.3245 294.8846v115.04M164.3245 409.9245h32" fill="none" stroke="#0000a0" stroke-width="2.88" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M354.8845 194.7246h-94.4M260.4846 194.7246v-84.96M320.9646 249.4446h33.92M354.8845 194.7246v-16.96M354.8845 249.4446v-54.72M483.3646 276.0046v-26.56M354.8845 249.4446v256.8M354.8845 506.2446h317.28" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 258.2415 71.5226)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 239.20639 422.70718 530.84161 697.95837 773.32477 956.82556">working</tspan>
+  </text>
+  <path d="M261.9246 34.7246h-2.88v2.72h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M672.1645 468.4845h-18.88M653.2845 468.4845v-43.36M702.4045 449.6045v-24.48" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 700.1616 436.478)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 108.1344 275.25119">rst</tspan>
+  </text>
+  <path d="M703.6846 423.5246h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 651.0431 437.5993)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 239.20639">clk</tspan>
+  </text>
+  <path d="M654.5646 423.5246h-2.88v2.88h2.88z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M672.1645 487.3646h-58.56" fill="none" stroke="green" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M971.0446 500.6446h-36.48M971.0446 512.0046h-36.48M934.5646 512.0046v-11.36M971.0446 500.6446l10.88 5.76M981.9246 506.4046l-10.88 5.6" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 937.27 509.9245)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 163.84 347.34079 530.84161 697.95837 884.73596 996.14716">convert</tspan>
+  </text>
+  <path d="M935.8446 504.8045h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M732.4846 506.2446h202.08" fill="none" stroke="#00f" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M815.5245 321.2846h-218.88v222.56h218.88z" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 787.3515 332.3225)" font-weight="400" font-size="327.68" font-family="sans-serif">
+    <tspan y="0" x="0 180.224 367.00159 439.09119 625.86877">delay</tspan>
+  </text>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 390.8785 330.5592)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 72.0896 258.86719 439.09119 625.86877 737.27997 976.48639 1218.9696 1386.0864 1576.1407 1762.9183">log2(Nwz+2)</tspan>
+  </text>
+  <path d="M456.4846 324.9646l-15.04 15.2" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 390.8785 292.8038)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 72.0896 258.86719 439.09119 625.86877 737.27997 976.48639 1218.9696 1386.0864 1576.1407 1762.9183">log2(Nwz+1)</tspan>
+  </text>
+  <path d="M456.4846 287.2046l-15.04 15.2" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(.03097 0 0 .02978 402.0784 407.8454)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 72.0896 258.86719 439.09119 625.86877 737.27997 976.48639 1218.9696 1386.0864">log2(Nwz)</tspan>
+  </text>
+  <path d="M456.0046 402.4046l-15.04 15.2" fill="none" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M613.6045 487.3646v-96.32M613.6045 391.0446h105.76M613.6045 391.0446v-50.88" fill="none" stroke="green" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <text style="-inkscape-font-specification:sans-serif" transform="matrix(0 -.03097 .02978 0 611.3605 375.52)" font-weight="400" font-size="327.68" font-family="sans-serif" fill="#008020">
+    <tspan y="0" x="0 239.20639 422.70718 530.84161 697.95837 773.32477 956.82556">working</tspan>
+  </text>
+  <path d="M614.8846 338.5646h-2.72v2.88h2.72z" fill="none" stroke="red" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+  <path d="M45.7646 332.5646c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32zM198.5646 410.0046c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM198.5646 230.6446c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM198.5646 294.8045c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM262.8845 87.1246c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32zM357.2845 249.5246c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32zM357.2845 194.7246c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32zM485.6045 194.7246c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM485.6045 106.0046c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM485.6045 249.5246c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM615.8445 391.1246c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM670.5646 106.0046c0-1.28-1-2.32-2.24-2.32-1.24 0-2.24 1.04-2.24 2.32 0 1.28 1 2.32 2.24 2.32 1.24 0 2.24-1.04 2.24-2.32zM772.6445 106.0046c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32zM772.6445 194.7246c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32zM583.8445 5.9246c0-1.28-1.03-2.32-2.32-2.32-1.29 0-2.32 1.04-2.32 2.32 0 1.28 1.03 2.32 2.32 2.32 1.29 0 2.32-1.04 2.32-2.32z" fill-rule="evenodd" stroke="#000" stroke-width=".64" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/>
+</svg>

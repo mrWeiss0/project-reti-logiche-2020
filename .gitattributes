@@ -1,2 +1,3 @@
 tcl/* linguist-generated
-schematic/* linguist-generated
+docs/schematic/*.dsn linguist-generated
+docs/schematic/*.svg linguist-generated

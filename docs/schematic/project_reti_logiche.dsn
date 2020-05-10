@@ -17,7 +17,7 @@ download the executable.-->
 			<SHEETS>1 of 1</SHEETS>
 			<SHOWS>0</SHOWS>
 			<DATE></DATE>
-			<GRID spacing='100.00000' snap='1'/>
+			<GRID spacing='50.00000' snap='1'/>
 		</DETAILS>
 		<FONT id='1'>
 			<HEIGHT>-10</HEIGHT>
@@ -54,7 +54,7 @@ download the executable.-->
 			<COLOR>000080</COLOR>
 			<THICKNESS>4</THICKNESS>
 		</STYLE>
-		<STYLE id='6'>
+		<STYLE id='5'>
 			<STYLE>0</STYLE>
 			<COLOR>000000</COLOR>
 			<THICKNESS>1</THICKNESS>
@@ -69,7 +69,6 @@ download the executable.-->
 			<DESCRIPTION></DESCRIPTION>
 			<PPP>1</PPP>
 			<GUID></GUID>
-			<REF_POINT power='0' part='0' pos='0.00000,0.00000'/>
 			<TinyCAD>
 				<RECTANGLE a='0.00000,0.00000' b='-8.00000,-8.00000' style='0' fill='0'/>
 			</TinyCAD>
@@ -106,7 +105,7 @@ download the executable.-->
 		<WIRE a='150.00000,54.00000' b='134.00000,54.00000'/>
 		<WIRE a='86.00000,34.00000' b='66.00000,34.00000'/>
 		<WIRE style='3' a='184.00000,74.00000' b='216.00000,74.00000'/>
-		<RECTANGLE a='82.00000,26.00000' b='188.00000,82.00000' style='6' fill='0'/>
+		<RECTANGLE a='82.00000,26.00000' b='188.00000,82.00000' style='5' fill='0'/>
 		<LABEL pos='66.00000,34.00000' direction='3' font='3' color='208000' style='1'>i_clk</LABEL>
 		<LABEL pos='66.00000,38.00000' direction='3' font='3' color='208000' style='1'>i_rst</LABEL>
 		<LABEL pos='66.00000,66.00000' direction='3' font='3' color='208000' style='1'>i_start</LABEL>
@@ -122,7 +121,7 @@ download the executable.-->
 		<BUSNAME pos='132.00000,74.00000' direction='3' font='3' color='208000'>data_sz-1</BUSNAME>
 		<BUSNAME pos='202.00000,74.00000' direction='3' font='3' color='208000'>data_sz</BUSNAME>
 		<BUSNAME pos='128.00000,46.00000' direction='3' font='3' color='208000'>log2(Nwz+2)</BUSNAME>
-		<TEXT pos='82.00000,26.00000' direction='3' font='3' color='000000'>main</TEXT>
+		<TEXT pos='82.00000,29.00000' direction='3' font='3' color='000000'>main</TEXT>
 		<WIRE a='124.00000,66.00000' b='150.00000,66.00000'/>
 		<BUSNAME pos='132.00000,62.00000' direction='3' font='3' color='208000'>log2(Nwz)</BUSNAME>
 		<WIRE a='124.00000,42.00000' b='216.00000,42.00000'/>

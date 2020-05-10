@@ -477,7 +477,7 @@ download the executable.-->
 			<HINT pin='2' net='8'/>
 			<HINT pin='3' net='1'/>
 		</SYMBOL>
-		<SYMBOL id='5' pos='195.00000,84.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<SYMBOL id='5' pos='195.00000,81.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='U8' show='0' pos='-17.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='AND' show='0' pos='-17.00000,-10.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -492,8 +492,8 @@ download the executable.-->
 		<WIRE style='3' a='100.00000,29.00000' b='100.00000,48.00000'/>
 		<WIRE style='3' a='83.00000,29.00000' b='100.00000,29.00000'/>
 		<WIRE style='3' a='100.00000,48.00000' b='129.00000,48.00000'/>
-		<WIRE style='3' a='104.00000,82.00000' b='129.00000,82.00000'/>
-		<WIRE style='3' a='143.00000,82.00000' b='178.00000,82.00000'/>
+		<WIRE style='3' a='104.00000,79.00000' b='129.00000,79.00000'/>
+		<WIRE style='3' a='143.00000,79.00000' b='178.00000,79.00000'/>
 		<WIRE a='143.00000,53.00000' b='149.00000,53.00000'/>
 		<WIRE a='149.00000,53.00000' b='149.00000,44.00000'/>
 		<WIRE a='149.00000,44.00000' b='154.00000,44.00000'/>
@@ -501,10 +501,10 @@ download the executable.-->
 		<WIRE a='149.00000,29.00000' b='149.00000,38.00000'/>
 		<WIRE a='149.00000,38.00000' b='154.00000,38.00000'/>
 		<WIRE style='2' a='175.00000,41.00000' b='257.00000,41.00000'/>
-		<WIRE style='2' a='175.00000,41.00000' b='175.00000,76.00000'/>
+		<WIRE style='2' a='175.00000,41.00000' b='175.00000,73.00000'/>
 		<WIRE style='2' a='171.00000,41.00000' b='175.00000,41.00000'/>
-		<WIRE style='2' a='175.00000,76.00000' b='178.00000,76.00000'/>
-		<SYMBOL id='6' pos='143.00000,91.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<WIRE style='2' a='175.00000,73.00000' b='178.00000,73.00000'/>
+		<SYMBOL id='6' pos='143.00000,88.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='U9' show='0' pos='-14.00000,4.40000'/>
 			<FIELD type='0' description='Name' value='DECODER' show='1' pos='-12.00000,-20.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -519,10 +519,10 @@ download the executable.-->
 		<BUSNAME pos='85.00000,29.00000' direction='3' font='5' color='208000'>data_sz</BUSNAME>
 		<WIRE style='3' a='122.00000,34.00000' b='129.00000,34.00000'/>
 		<WIRE style='3' a='122.00000,58.00000' b='129.00000,58.00000'/>
-		<BUSSLASH pos='104.00000,82.00000' direction='1'/>
-		<WIRE style='3' a='100.00000,48.00000' b='100.00000,78.00000'/>
-		<LABEL pos='104.00000,82.00000' direction='3' font='5' color='208000' style='0'>offset[log2(Dwz)-1:0]</LABEL>
-		<SYMBOL id='1' pos='195.00000,61.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
+		<BUSSLASH pos='104.00000,79.00000' direction='1'/>
+		<WIRE style='3' a='100.00000,48.00000' b='100.00000,75.00000'/>
+		<LABEL pos='104.00000,79.00000' direction='3' font='5' color='208000' style='0'>offset[log2(Dwz)-1:0]</LABEL>
+		<SYMBOL id='1' pos='195.00000,65.00000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='U7' show='0' pos='-10.00000,4.40000'/>
 			<FIELD type='0' description='Name' value='CONST' show='1' pos='-10.00000,-4.00000'/>
 			<FIELD type='2' description='$$SPICE_PROLOG_PRIORITY' value='5' show='0' pos='0.00000,0.00000'/>
@@ -532,23 +532,23 @@ download the executable.-->
 			<HINT pin='1' net='14'/>
 		</SYMBOL>
 		<WIRE style='3' a='257.00000,51.00000' b='236.00000,51.00000'/>
-		<BUSSLASH pos='236.00000,75.00000' direction='0'/>
-		<BUSSLASH pos='236.00000,55.00000' direction='0'/>
-		<WIRE style='3' a='232.00000,79.00000' b='195.00000,79.00000'/>
-		<WIRE style='3' a='236.00000,55.00000' b='236.00000,75.00000'/>
-		<WIRE style='3' a='195.00000,59.00000' b='232.00000,59.00000'/>
+		<BUSSLASH pos='236.00000,72.00000' direction='0'/>
+		<BUSSLASH pos='236.00000,59.00000' direction='0'/>
+		<WIRE style='3' a='232.00000,76.00000' b='195.00000,76.00000'/>
+		<WIRE style='3' a='236.00000,59.00000' b='236.00000,72.00000'/>
+		<WIRE style='3' a='195.00000,63.00000' b='232.00000,63.00000'/>
 		<WIRE style='3' a='100.00000,29.00000' b='100.00000,24.00000'/>
 		<WIRE style='3' a='100.00000,24.00000' b='129.00000,24.00000'/>
 		<BUSNAME pos='239.00000,51.00000' direction='3' font='5' color='208000'>data_sz-1</BUSNAME>
-		<WIRE style='3' a='236.00000,51.00000' b='236.00000,55.00000'/>
+		<WIRE style='3' a='236.00000,51.00000' b='236.00000,59.00000'/>
 		<JUNCTION pos='100.00000,29.00000'/>
 		<JUNCTION pos='100.00000,48.00000'/>
 		<JUNCTION pos='175.00000,41.00000'/>
 		<TEXT pos='115.00000,35.50000' direction='3' font='4' color='000000'>0</TEXT>
 		<TEXT pos='113.50000,59.50000' direction='3' font='4' color='000000'>Dwz</TEXT>
-		<TEXT pos='188.00000,60.50000' direction='3' font='4' color='000000'>id</TEXT>
-		<LABEL pos='195.00000,59.00000' direction='3' font='3' color='208000' style='0'>address_out[data_sz-2:Dwz]</LABEL>
-		<LABEL pos='195.00000,79.00000' direction='3' font='3' color='208000' style='0'>address_out[Dwz-1:0]</LABEL>
-		<JUNCTION pos='236.00000,55.00000'/>
+		<TEXT pos='188.00000,64.50000' direction='3' font='4' color='000000'>id</TEXT>
+		<LABEL pos='195.00000,63.00000' direction='3' font='3' color='208000' style='0'>address_out[data_sz-2:Dwz]</LABEL>
+		<LABEL pos='195.00000,76.00000' direction='3' font='3' color='208000' style='0'>address_out[Dwz-1:0]</LABEL>
+		<JUNCTION pos='236.00000,59.00000'/>
 	</TinyCAD>
 </TinyCADSheets>
