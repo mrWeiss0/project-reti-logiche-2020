@@ -9,11 +9,12 @@ family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700');
     size: A4;
     margin: 20mm;
     @top-right {
-        font-family: Ubuntu;
+        font-family: Ubuntu, sans-serif;
         font-weight: lighter;
         content: string(doctitle, first-except);
     }
     @bottom {
+        font-family: "Cormorant Garamond", serif;
         content: counter(page);
     }
 }
@@ -43,10 +44,12 @@ ul {
 h1 {
     string-set: doctitle content();
     page-break-before: always;
+    font-family: Ubuntu, sans-serif;
 }
 
-h1, h2, h3 {
+h2, h3 {
     font-family: Ubuntu, sans-serif;
+    font-weight: normal;
 }
 
 code {
@@ -69,6 +72,10 @@ table {
     border-collapse: collapse;
 }
 
+table td {
+    vertical-align: baseline;
+}
+
 .avoidwrap{
     display: inline-block;
 }
@@ -88,7 +95,7 @@ table {
 }
 
 #cover #title2 {
-    font-family: Ubuntu Condensed;
+    font-family: Ubuntu Condensed, sans-serif;
     font-size: 1.35em;
     margin: .8em 0;
 }
@@ -127,7 +134,7 @@ table {
 #toc > ul > li {
     margin-top: 1em;
     font-weight: bold;
-    font-family: Cormorant SC;
+    font-family: Cormorant SC, serif;
 }
 
 #toc > ul > li a:after {
@@ -137,19 +144,18 @@ table {
 /* table.interface */
 
 table.interface td {
-    vertical-align: baseline;
     padding-bottom: .5em;
 }
 
 table.interface td:first-child {
-    font-family: Ubuntu Mono;
+    font-family: Ubuntu Mono, monospace;
     padding-left: 10mm;
 }
 
 table.interface td:nth-child(2) {
-    font-family: Ubuntu Mono;
+    font-family: Ubuntu Mono, monospace;
     text-align: right;
-    padding-right: 15mm;
+    padding-right: 10mm;
 }
 
 table.interface td:last-child {
@@ -158,5 +164,43 @@ table.interface td:last-child {
 
 table.interface td.mid {
     font-family: inherit;
-    padding: .5em 0 1em 0;
+    padding: 1em 0;
+}
+
+/* table.minitab */
+
+table.minitab {
+    margin: .4em 10mm 1em;
+}
+
+table.minitab th {
+    text-align: left;
+    font-family: Ubuntu, sans-serif;
+    padding-bottom: .6em;
+}
+
+table.minitab tr > :first-child {
+    padding-right: 5mm;
+    border-right: 1px solid #444;
+    text-align: right;
+}
+
+table.minitab tr > :last-child {
+    padding-left: 5mm;
+}
+
+table.encode {
+    margin: 0 auto;
+}
+
+table.encode td {
+    font-family: Ubuntu Mono, monospace;
+}
+
+table.memory {
+    float: right;
+}
+
+table.memory td:first-child {
+    font-family: Ubuntu Mono, monospace;
 }

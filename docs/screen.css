@@ -29,3 +29,13 @@ a[href]:hover {
 #abstract {
     max-width: 160mm;
 }
+
+@media (max-width: 450px) {
+    table.interface td {
+        display: inline-block;
+    }
+
+    table.interface td:last-child {
+        display: block;
+    }
+}
