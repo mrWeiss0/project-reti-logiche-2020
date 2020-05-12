@@ -65,6 +65,10 @@ p {
     orphans: 5;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 .avoidwrap{
     display: inline-block;
 }
@@ -128,4 +132,31 @@ p {
 
 #toc > ul > li a:after {
     content: leader('.') target-counter(attr(href), page);
+}
+
+/* table.interface */
+
+table.interface td {
+    vertical-align: baseline;
+    padding-bottom: .5em;
+}
+
+table.interface td:first-child {
+    font-family: Ubuntu Mono;
+    padding-left: 10mm;
+}
+
+table.interface td:nth-child(2) {
+    font-family: Ubuntu Mono;
+    text-align: right;
+    padding-right: 15mm;
+}
+
+table.interface td:last-child {
+    padding-right: 10mm;
+}
+
+table.interface td.mid {
+    font-family: inherit;
+    padding: .5em 0 1em 0;
 }

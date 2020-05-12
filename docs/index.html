@@ -3,6 +3,7 @@
 <head>
     <title>Working Zone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <style>
         @import url("page.css");
         @import url("screen.css") screen;
@@ -23,11 +24,34 @@
         <div id="name">Giorgio Pristia</div>
     </div>
     <p id="abstract">
-        L'obiettivo del progetto &egrave; di sviluppare un componente hardware in VHDL che implementi la codifica <span class="avoidwrap">Working Zone</span> degli indirizzi forniti. Il componente si interfaccia con una memoria RAM da cui legge i dati in ingresso e in cui scrive il risultato della conversione.
+        L'obiettivo del progetto è di sviluppare un componente hardware in VHDL che implementi la codifica <span class="avoidwrap">Working Zone</span> degli indirizzi forniti. Il componente si interfaccia con una memoria RAM da cui legge i dati in ingresso e in cui scrive il risultato della conversione.
     </p>
-    <!-- <h1>Indice</h1> -->
+    <h1>Indice</h1>
     <div id="toc"></div>
     <div id="content">
+        <h1>Funzionamento</h1>
+        <p></p><table class="interface">
+        <tr><td class="mid" colspan="3">L'interfaccia del componente, da specifica, ha i seguenti ingressi</td></tr>
+        <tr><td>i_clk</td><td></td>
+            <td>segnale di clock</td></tr>
+        <tr><td>i_rst</td><td></td>
+            <td>segnale di reset sincrono</td></tr>
+        <tr><td>i_start</td><td></td>
+            <td>segnale di start, viene alzato per avviare il componente e abbassato al termine dell'esecuzione</td></tr>
+        <tr><td>i_data</td><td>[8]</td>
+            <td>bus dati in lettura dalla memoria</td></tr>
+        <tr><td class="mid" colspan="3">e le seguenti uscite</td></tr>
+        <tr><td>o_done</td><td></td>
+            <td>viene alzato quando termina la computazione e abbassato, dopo che è stato abbassato il segnale i_start, quando il componente è pronto per la prossima esecuzione</td></tr>
+        <tr><td>o_en</td><td></td>
+            <td>segnale di enable della memoria</td></tr>
+        <tr><td>o_we</td><td></td>
+            <td>sengale di write enable della memoria</td></tr>
+        <tr><td>o_address</td><td>[16]</td>
+            <td>indirizzo della memoria</td></tr>
+        <tr><td>o_data</td><td>[8]</td>
+            <td>bus dati in scrittura in memoria</td></tr>
+        </table>
     </div>
 </body>
 </html>
