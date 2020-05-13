@@ -59,7 +59,7 @@
         </p>
         
         <h2>Codifica Working Zone</h2>
-        <p>Data una lista di <em>Nwz</em> working zone di dimensione fissa <em>Dwz</em>, la codifica permette di rappresentare gli indirizzi appartenenti a una di queste come numero della working zone WZ_NUM e offset rispetto all'indirizzo base di quest'ultima WZ_OFFSET. Il risultato ha un bit aggiuntivo WZ_BIT rispetto all'indirizzo codificato, posto a 1 se l'indirizzo è in una working zone, altrimenti a 0.
+        <p>Data una lista di <em>Nwz</em> working zone di dimensione fissa <em>Dwz</em> e non sovrapposte, la codifica permette di rappresentare gli indirizzi appartenenti a una di queste come numero della working zone WZ_NUM e offset rispetto all'indirizzo base di quest'ultima WZ_OFFSET. Il risultato ha un bit aggiuntivo WZ_BIT rispetto all'indirizzo codificato, posto a 1 se l'indirizzo è in una working zone, altrimenti a 0.
         </p>
         <p>Se l'indirizzo da codificare ADDR appartiene a una working zone, il risultato è composto da WZ_BIT posto a 1, WZ_NUM codificato in binario e WZ_OFFSET codificato one-hot.
         Altrimenti l'indirizzo non viene modificato e il risultato è WZ_BIT posto a 0 concatenato ad ADDR.
@@ -174,6 +174,10 @@
             <td>risultato della conversione</td></tr>
         </table>
         <figure><object data="schematic/convert.svg"></object></figure>
+        <p>Il modulo salva gli indirizzi base delle working zone e confronta l'indirizzo in ingresso con ognuna in parallelo, istanziando un sottomodulo <code>encode</code> per ogni working zone. Se c'è un match, l'indirizzo in uscita è l'indirizzo codificato con il bit <em>WZ_BIT</em> posto a 1, in caso contrario un muxer seleziona l'indirizzo in ingresso e concatena <em>WZ_BIT</em> a 0.
+        </p>
+        <p>L'indirizzo codificato è selezionato con una catena di <em>or</em> collegati ai moduli <code>encode</code>, che hanno output a 0 in caso di mismatch. Da contratto le working zone non devono sovrapporsi, in caso contrario se si ha un match multiplo a causa di una configurazione sbagliata degli indirizzi base, l'output è un valore non valido.
+        </p>
         
         <h3>Encode</h3>
         <p>Questo è un sottomodulo combinatorio che confronta l'indirizzo selezionato con l'indirizzo base di una working zone e in caso di match calcola la codifica dell'indirizzo. Ha un parametro aggiuntivo, <em>id</em>, ovvero l'indice della working zone di riferimento <em>WZ_NUM</em> usato per comporre il risultato.
