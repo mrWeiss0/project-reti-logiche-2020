@@ -72,23 +72,23 @@
             <tr><td>ADDR &#x2209; WZ</td>
                 <td><code>1 & ADDR</code></td></tr>
         </table>
-        <p>Dato che `WZ_NUM & WZ_OFFSET` ha dimensione uguale ad ADDR e WZ_OFFSET ha dimensione <em>Dwz</em> <span class="avoidwrap">(one-hot)</span>, il massimo numero di working zone utilizzabili per codificare indirizzi a <em>n</em>&nbsp;bit è <em>Nwz<sub>max</sub></em>&nbsp;=&nbsp;2<sup><em>n</em>&minus;<em>Dwz</em></sup>.
+        <p>Dato che `WZ_NUM & WZ_OFFSET` ha dimensione uguale ad ADDR e WZ_OFFSET ha dimensione <em>Dwz</em> <span class="avoidwrap">(one-hot)</span>, il massimo numero di working zone utilizzabili per codificare indirizzi a <em>n</em>&nbsp;bit è 2<sup><em>n</em>&minus;<em>Dwz</em></sup>.
         </p>
         
         <h2>Struttura della memoria</h2>
-        <p>Il componente utilizza 8 working zone di dimensione 4, lavora con indirizzi a 7 bit e genera un output a 8 bit.
+        <p>Il componente utilizza <em>Nwz</em>=8 working zone di dimensione <em>Dwz</em>=4, lavora con indirizzi a 7 bit e genera un output a 8 bit.
         </p>
         <table class="minitab memory">
             <tr><th>Indirizzo</th>
                 <th>Contenuto</th></tr>
-            <tr><td><code>0-7</code></td>
+            <tr><td><code>0..Nwz&minus;1</code></td>
                 <td>Indirizzi working zone</td></tr>
-            <tr><td><code>8</code></td>
+            <tr><td><code>Nwz</code></td>
                 <td>Indirizzo da codificare</td></tr>
-            <tr><td><code>9</code></td>
+            <tr><td><code>Nwz+1</code></td>
                 <td><em>(Risultato della codifica)</em></td></tr>
         </table>
-        <p>La memoria con cui si interfaccia è indirizzabile al byte con indirizzi di 16 bit. Le celle di memoria da 0 a 7 contengono gli indirizzi delle 8 working zone e la cella all'indirizzo 8 contiene l'indirizzo da codificare. Il risultato della codifica viene scritto in memoria all'indirizzo 9.
+        <p>La memoria con cui si interfaccia è indirizzabile al byte con indirizzi di 16 bit. Le celle di memoria da 0 a <em>Nwz</em>&minus;1 contengono gli indirizzi delle working zone e la cella all'indirizzo <em>Nwz</em> contiene l'indirizzo da codificare. Il risultato della codifica viene scritto in memoria all'indirizzo <em>Nwz+1</em>.
         </p>
         <p>Si assume che gli indirizzi delle working zone non cambino fra esecuzioni successive, finché non si resetta il componente.
         </p>
