@@ -101,6 +101,21 @@
         <object data="schematic/project_reti_logiche.svg"></object>
         <p>L'entità <code>main</code> istanzia e collega i due moduli che costituiscono il componente: <code>control</code> e <code>convert</code>. Il primo si occupa del controllo dell'esecuzione, il secondo esegue la conversione degli indirizzi in ingresso.
         </p>
+        
+        <h2>Control</h2>
+        <p>Questo modulo gestisce lo stato e la logica di controllo. Riceve in ingresso il clock e i segnali di start e reset dall'interfaccia e genera i segnali di controllo per la memoria e per il modulo <code>convert</code>. Ha solo il parametro <em>Nwz</em> per gestire gli indirizzi di lettura dalla memoria, <em>data_sz</em> e <em>Dwz</em> non sono rilevanti.
+        </p>
+        <object data="schematic/control.svg"></object>
+        
+        <h2>Convert</h2>
+        <p>Questo modulo esegue la conversione. Riceve in ingresso il clock, i dati in lettura dalla memoria, e il controllo dell'input dal modulo </code>control</code>. Ha come uscita il risultato della conversione da scrivere in memoria.
+        </p>
+        <object data="schematic/convert.svg"></object>
+        
+        <h3>Encode</h3>
+        <p>Questo è un sottomodulo combinatorio che confronta l'indirizzo selezionato con l'indirizzo base di una working zone e in caso di match calcola l'indirizzo convertito. Ha un parametro aggiuntivo, <em>id</em>, ovvero l'indice della working zone di riferimento <em>WZ_NUM</em> usato per comporre il risultato.
+        </p>
+        <object data="schematic/encode.svg"></object>
     </div>
 </body>
 </html>
