@@ -103,6 +103,12 @@ figure {
     display: inline-block;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 /* Cover */
 
 #cover {

@@ -96,6 +96,8 @@
         <h1>Implementazione</h1>
         <p>Il componente è stato progettato in modo modulare e parametrico. Il modulo principale, <code>main</code>, dichiara tre parametri generic: <em>data_sz</em>, dimensione dell'output, <em>Dwz</em> e <em>Nwz</em>, che possono essere assegnati arbitrariamente col vincolo <em>Nwz</em>&leq;2<sup><em>data_sz</em>&minus;1&minus;<em>Dwz</em></sup> perché il numero di working zone sia rappresentabile nella dimensione data.
         </p>
+        <p>Le working zone lette vengono salvate in registri interni, così da poter confrontare velocemente diversi indirizzi con lo stesso set di working zone. Il componente impiega un ciclo di clock per ogni working zone letta, uno per leggere l'indirizzo da codificare e uno per scrive il risultato, in totale 7+2=9 cicli di clock per la prima codifica, 2 per le codifiche successive, escluso l'overhead del protocollo (aspettare che venga abbassato e poi rialzato il segnale di start).
+        </p>
         <p>L'entità top level, <code>project_reti_logiche</code>, istanzia il modulo principale <code>main</code> con i parametri <em>data_sz</em>=8, <em>Dwz</em>=4, <em>Nwz</em>=8, e fornisce l'interfaccia esterna del componente. Gli indirizzi in ingresso hanno dimensione <em>data_sz</em>&minus;1, perciò l'ultimo bit dei dati letti dalla memoria non è significativo e rimane scollegato; inoltre il componente internamente ignora la dimensione della memoria da cui legge i dati e usa indirizzi di log<sub>2</sub>(<em>Nwz</em>+2)&nbsp;bit (4&nbsp;bit con 8 working zone), la dimensione minima per rappresentare il range di indirizzi utilizzati, l'interfaccia esterna estende l'indirizzo alla dimensione corretta, che in questo caso è 16&nbsp;bit.
         </p>
         <figure><object data="schematic/project_reti_logiche.svg"></object></figure>
@@ -128,6 +130,31 @@
             <td>posto a 1 se il dato in lettura è l'indirizzo da convertire e wz_id non è significativo</td></tr>
         </table>
         <figure><object data="schematic/control.svg"></object></figure>
+        <p>Internamente il modulo ha tre registri di stato: <code>wz_id_st</code>, <code>write_s</code> e <code>done_s</code>.
+        <code>wz_id_st</code> è il contatore del numero di working zone lette dalla memoria e incrementa ogni ciclo di clock man mano che queste vengono lette e salvate, fino al valore <em>Nwz</em>, valore mantenuto anche fra esecuzioni successive. Il valore <em>Nwz</em> segnala che sono state lette tutte le working zone e viene letto nel ciclo corrente l'indirizzo da convertire, quindi prepara per il ciclo successivo lo stato <code>write_s</code> a 1. <code>write_s</code> resta alto per un ciclo di clock in cui avviene la scrittura all'indirizzo <em>Nwz+1</em>, selezionato da un muxer. Nel ciclo successivo viene alzato <code>done_s</code> che resta alto finché <code>start</code> non diventa 0.
+        </p>
+        <p>Di seguito le tabelle di transizione per gli stati <code>write_s</code> e <code>done_s</code> con i valori dei segnali assunti durante l'esecuzione
+        </p>
+        <div class="flex"><table class="minitab state">
+            <tr><th>write_s</th>
+                <th>wz&nbsp;&geq;&nbsp;Nwz</th>
+                <th>write_s'</th></tr>
+            <tr><td><code>0</code></td><td><code>0</code></td><td><code>0</code></td></tr>
+            <tr><td><code>0</code></td><td><code>1</code></td><td><code>1</code></td></tr>
+            <tr><td><code>1</code></td><td><code>1</code></td><td><code>0</code></td></tr>
+        </table>
+        <table class="minitab state">
+            <tr><th>done_s</th>
+                <th>write_s</th>
+                <th>start</th>
+                <th>done_s'</th></tr>
+            <tr><td><code>0</code></td><td><code>0</code></td><td><code>1</code></td><td><code>0</code></td></tr>
+            <tr><td><code>0</code></td><td><code>1</code></td><td><code>1</code></td><td><code>1</code></td></tr>
+            <tr><td><code>1</code></td><td><code>0</code></td><td><code>1</code></td><td><code>1</code></td></tr>
+            <tr><td><code>1</code></td><td><code>0</code></td><td><code>0</code></td><td><code>0</code></td></tr>
+        </table></div>
+        <p>I due registri <code>wz_id_cur</code> e <code>convert_s</code> servono da buffer per ritardare di un ciclo di clock i segnali di controllo per il modulo <code>convert</code>, che devono essere sincronizzati con il dato letto dalla memoria.
+        </p>
         
         <h2>Convert</h2>
         <p>Questo modulo esegue la conversione. Riceve in ingresso il clock, i dati in lettura dalla memoria, e il controllo dell'input dal modulo </code>control</code>. Ha come uscita il risultato della conversione da scrivere in memoria.
