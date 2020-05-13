@@ -98,24 +98,72 @@
         </p>
         <p>L'entità top level, <code>project_reti_logiche</code>, istanzia il modulo principale <code>main</code> con i parametri <em>data_sz</em>=8, <em>Dwz</em>=4, <em>Nwz</em>=8, e fornisce l'interfaccia esterna del componente. Gli indirizzi in ingresso hanno dimensione <em>data_sz</em>&minus;1, perciò l'ultimo bit dei dati letti dalla memoria non è significativo e rimane scollegato; inoltre il componente internamente ignora la dimensione della memoria da cui legge i dati e usa indirizzi di log<sub>2</sub>(<em>Nwz</em>+2)&nbsp;bit (4&nbsp;bit con 8 working zone), la dimensione minima per rappresentare il range di indirizzi utilizzati, l'interfaccia esterna estende l'indirizzo alla dimensione corretta, che in questo caso è 16&nbsp;bit.
         </p>
-        <object data="schematic/project_reti_logiche.svg"></object>
+        <figure><object data="schematic/project_reti_logiche.svg"></object></figure>
         <p>L'entità <code>main</code> istanzia e collega i due moduli che costituiscono il componente: <code>control</code> e <code>convert</code>. Il primo si occupa del controllo dell'esecuzione, il secondo esegue la conversione degli indirizzi in ingresso.
         </p>
         
         <h2>Control</h2>
         <p>Questo modulo gestisce lo stato e la logica di controllo. Riceve in ingresso il clock e i segnali di start e reset dall'interfaccia e genera i segnali di controllo per la memoria e per il modulo <code>convert</code>. Ha solo il parametro <em>Nwz</em> per gestire gli indirizzi di lettura dalla memoria, <em>data_sz</em> e <em>Dwz</em> non sono rilevanti.
         </p>
-        <object data="schematic/control.svg"></object>
+        <table class="interface">
+        <tr><th class="mid" colspan="3">Ingressi:</th></tr>
+        <tr><td><code>clk</code></td><td></td>
+            <td>segnale di clock</td></tr>
+        <tr><td><code>rst</code></td><td></td>
+            <td>segnale di reset sincrono</td></tr>
+        <tr><td><code>start</code></td><td></td>
+            <td>segnale di start</td></tr>
+        <tr><th class="mid" colspan="3">Uscite:</th></tr>
+        <tr><td><code>done</code></td><td></td>
+            <td>segnale di done</td></tr>
+        <tr><td><code>mem_en</code></td><td></td>
+            <td>segnale di enable della memoria</td></tr>
+        <tr><td><code>mem_we</code></td><td></td>
+            <td>sengale di write enable della memoria</td></tr>
+        <tr><td><code>mem_addr</code></td><td><code>[log2(Nwz+2)]</code></td>
+            <td>indirizzo della memoria</td></tr>
+        <tr><td><code>wz_id</code></td><td><code>[log2(Nwz)]</code></td>
+            <td>id della working zone in lettura</td></tr>
+        <tr><td><code>convert</code></td><td></td>
+            <td>posto a 1 se il dato in lettura è l'indirizzo da convertire e wz_id non è significativo</td></tr>
+        </table>
+        <figure><object data="schematic/control.svg"></object></figure>
         
         <h2>Convert</h2>
         <p>Questo modulo esegue la conversione. Riceve in ingresso il clock, i dati in lettura dalla memoria, e il controllo dell'input dal modulo </code>control</code>. Ha come uscita il risultato della conversione da scrivere in memoria.
         </p>
-        <object data="schematic/convert.svg"></object>
+        <table class="interface">
+        <tr><th class="mid" colspan="3">Ingressi:</th></tr>
+        <tr><td><code>clk</code></td><td></td>
+            <td>segnale di clock</td></tr>
+        <tr><td><code>wz_id</code></td><td><code>[log2(Nwz)]</code></td>
+            <td>id della working zone in lettura</td></tr>
+        <tr><td><code>convert</code></td><td></td>
+            <td>posto a 1 se il dato in lettura è l'indirizzo da convertire e wz_id non è significativo</td></tr>
+        <tr><td><code>address_in</code></td><td><code>[data_sz&minus;1]</code></td>
+            <td>indirizzo in ingresso, interpretato in base al valore di <code>wz_id</code> e <code>convert</code></td></tr>
+        <tr><th class="mid" colspan="3">Uscite:</th></tr>
+        <tr><td><code>address_out</code></td><td><code>[data_sz]</code></td>
+            <td>risultato della conversione</td></tr>
+        </table>
+        <figure><object data="schematic/convert.svg"></object></figure>
         
         <h3>Encode</h3>
-        <p>Questo è un sottomodulo combinatorio che confronta l'indirizzo selezionato con l'indirizzo base di una working zone e in caso di match calcola l'indirizzo convertito. Ha un parametro aggiuntivo, <em>id</em>, ovvero l'indice della working zone di riferimento <em>WZ_NUM</em> usato per comporre il risultato.
+        <p>Questo è un sottomodulo combinatorio che confronta l'indirizzo selezionato con l'indirizzo base di una working zone e in caso di match calcola la codifica dell'indirizzo. Ha un parametro aggiuntivo, <em>id</em>, ovvero l'indice della working zone di riferimento <em>WZ_NUM</em> usato per comporre il risultato.
         </p>
-        <object data="schematic/encode.svg"></object>
+        <table class="interface">
+        <tr><th class="mid" colspan="3">Ingressi:</th></tr>
+        <tr><td><code>wz_base</code></td><td><code>[data_sz&minus;1]</code></td>
+            <td>indirizzo base della working zone di riferimento</td></tr>
+        <tr><td><code>address_in</code></td><td><code>[data_sz&minus;1]</code></td>
+            <td>indirizzo da confrontare</td></tr>
+        <tr><th class="mid" colspan="3">Uscite:</th></tr>
+        <tr><td><code>match</code></td><td></td>
+            <td>posto a 1 se l'indirizzo appartiene alla working zone</td></tr>
+        <tr><td><code>address_out</code></td><td><code>[data_sz&minus;1]</code></td>
+            <td>il risultato della codifica escluso <em>WZ_BIT</em> se <code>match</code> vale 1, altrimenti tutti i bit sono posti a 0</td></tr>
+        </table>
+        <figure><object data="schematic/encode.svg"></object></figure>
     </div>
 </body>
 </html>

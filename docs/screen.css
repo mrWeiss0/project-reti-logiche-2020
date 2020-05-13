@@ -40,5 +40,6 @@ a[href]:hover {
 
     table.interface td:last-child {
         display: block;
+        padding-left: 0;
     }
 }

@@ -51,6 +51,7 @@ h1 {
 
 h2, h3 {
     font-family: Roboto Slab, serif;
+    page-break-after: avoid;
     font-weight: 400;
 }
 
@@ -72,7 +73,10 @@ p {
 }
 
 table {
+    page-break-inside: avoid;
     border-collapse: collapse;
+    margin: 1em 0;
+    line-height: 1.5;
 }
 
 table th {
@@ -83,6 +87,11 @@ table th {
 
 table td {
     vertical-align: baseline;
+}
+
+figure {
+    margin: 1em 0;
+    padding: 5mm;
 }
 
 .cond {
@@ -156,47 +165,46 @@ table td {
 
 /* table.interface */
 
-table.interface td {
-    padding-bottom: .5em;
+table.interface {
+    position: relative;
 }
 
-table.interface td:first-child {
-    padding-left: 10mm;
-}
-
-table.interface td:nth-child(2) {
-    text-align: right;
-    padding-right: 10mm;
-}
-
-table.interface td:last-child {
-    padding-right: 10mm;
-}
-
-table.interface td.mid {
+table.interface .mid {
     font-family: inherit;
     padding: 1em 0;
 }
 
-/* table.minitab */
-
-table.minitab {
-    margin: .4em 10mm 1em;
-    line-height: 1.5;
+table.interface td:not(.mid):first-child {
+    padding-left: 10mm;
 }
+
+table.interface td:not(.mid):last-child {
+    padding-left: 10mm;
+    padding-bottom: .5em;
+}
+
+table.interface td:not(.mid):first-child:before {
+    position: absolute;
+    left: 10mm;
+    margin-left: -2mm;
+    transform: translateX(-100%);
+    content: '\2013';
+}
+
+/* table.minitab */
 
 table.minitab th {
     padding-bottom: .6em;
 }
 
-table.minitab tr > :first-child {
+table.minitab tr > :not(:last-child) {
     padding-right: 5mm;
-    border-right: 1px solid #444;
     text-align: right;
 }
 
 table.minitab tr > :last-child {
     padding-left: 5mm;
+    border-left: 1px solid #444;
 }
 
 table.encode {
@@ -205,4 +213,5 @@ table.encode {
 
 table.memory {
     float: right;
+    margin: .4em 10mm 1em;
 }
