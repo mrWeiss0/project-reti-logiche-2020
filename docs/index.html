@@ -92,6 +92,15 @@
         </p>
         <p>Si assume che gli indirizzi delle working zone non cambino fra esecuzioni successive, finché non si resetta il componente.
         </p>
+        
+        <h1>Implementazione</h1>
+        <p>Il componente è stato progettato in modo modulare e parametrico. Il modulo principale, <code>main</code>, dichiara tre parametri generic: <em>data_sz</em>, dimensione dell'output, <em>Dwz</em> e <em>Nwz</em>, che possono essere assegnati arbitrariamente col vincolo <em>Nwz</em>&leq;2<sup><em>data_sz</em>&minus;1&minus;<em>Dwz</em></sup> perché il numero di working zone sia rappresentabile nella dimensione data.
+        </p>
+        <p>L'entità top level, <code>project_reti_logiche</code>, istanzia il modulo principale <code>main</code> con i parametri <em>data_sz</em>=8, <em>Dwz</em>=4, <em>Nwz</em>=8, e fornisce l'interfaccia esterna del componente. Gli indirizzi in ingresso hanno dimensione <em>data_sz</em>&minus;1, perciò l'ultimo bit dei dati letti dalla memoria non è significativo e rimane scollegato; inoltre il componente internamente ignora la dimensione della memoria da cui legge i dati e usa indirizzi di log<sub>2</sub>(<em>Nwz</em>+2)&nbsp;bit (4&nbsp;bit con 8 working zone), la dimensione minima per rappresentare il range di indirizzi utilizzati, l'interfaccia esterna estende l'indirizzo alla dimensione corretta, che in questo caso è 16&nbsp;bit.
+        </p>
+        <object data="schematic/project_reti_logiche.svg"></object>
+        <p>L'entità <code>main</code> istanzia e collega i due moduli che costituiscono il componente: <code>control</code> e <code>convert</code>. Il primo si occupa del controllo dell'esecuzione, il secondo esegue la conversione degli indirizzi in ingresso.
+        </p>
     </div>
 </body>
 </html>
