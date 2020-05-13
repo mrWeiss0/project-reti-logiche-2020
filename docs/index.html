@@ -16,7 +16,7 @@
             <span class="avoidwrap">Prova Finale</span>
             <span class="avoidwrap">Reti Logiche</span>
         </h1>
-        <div id="title2">
+        <div id="title2" class="cond">
             Codifica <span class="avoidwrap">Working Zone</span> in VHDL
         </div>
         <div id="uni">Politecnico di Milano</div>
@@ -24,7 +24,7 @@
         <div id="name">Giorgio Pristia</div>
     </div>
     <p id="abstract">
-        L'obiettivo del progetto è di sviluppare un componente hardware in VHDL che implementi la codifica <span class="avoidwrap">Working Zone</span> degli indirizzi forniti. Il componente si interfaccia con una memoria da cui legge i dati in ingresso e in cui scrive il risultato della conversione.
+        L'obiettivo del progetto è di sviluppare un componente hardware in VHDL che implementi la codifica <em class="avoidwrap">Working Zone</em> degli indirizzi forniti. Il componente si interfaccia con una memoria da cui legge i dati in ingresso e in cui scrive il risultato della conversione.
     </p>
     <h1>Indice</h1>
     <div id="toc"></div>
@@ -35,44 +35,44 @@
         </p>
         <table class="interface">
         <tr><td class="mid" colspan="3">L'interfaccia del componente, da specifica, ha i seguenti ingressi</td></tr>
-        <tr><td>i_clk</td><td></td>
+        <tr><td><code>i_clk</code></td><td></td>
             <td>segnale di clock</td></tr>
-        <tr><td>i_rst</td><td></td>
+        <tr><td><code>i_rst</code></td><td></td>
             <td>segnale di reset sincrono, porta il componente nello stato iniziale</td></tr>
-        <tr><td>i_start</td><td></td>
+        <tr><td><code>i_start</code></td><td></td>
             <td>segnale di start, tenuto a 1 durante l'esecuzione</td></tr>
-        <tr><td>i_data</td><td>[8]</td>
+        <tr><td><code>i_data</code></td><td><code>[8]</code></td>
             <td>bus dati in lettura dalla memoria</td></tr>
         <tr><td class="mid" colspan="3">e le seguenti uscite</td></tr>
-        <tr><td>o_done</td><td></td>
+        <tr><td><code>o_done</code></td><td></td>
             <td>segnale di done, portato a 1 al completamento della codifica</td></tr>
-        <tr><td>o_en</td><td></td>
+        <tr><td><code>o_en</code></td><td></td>
             <td>segnale di enable della memoria</td></tr>
-        <tr><td>o_we</td><td></td>
+        <tr><td><code>o_we</code></td><td></td>
             <td>sengale di write enable della memoria</td></tr>
-        <tr><td>o_address</td><td>[16]</td>
+        <tr><td><code>o_address</code></td><td><code>[16]</code></td>
             <td>indirizzo della memoria</td></tr>
-        <tr><td>o_data</td><td>[8]</td>
+        <tr><td><code>o_data</code></td><td><code>[8]</code></td>
             <td>bus dati in scrittura in memoria</td></tr>
         </table>
         <p>Il componente avvia l'esecuzione quando <code>i_start</code> è portato a 1. Se il segnale è portato a 0 durante l'esecuzione, questa si interrompe per riprendere quando <code>i_start</code> è nuovamente alto. Al termine dell'esecuzione, il risultato è scritto in memoria e viene alzato <code>o_done</code>, mantenuto alto finché non si abbassa <code>i_start</code>. Quando <code>o_done</code> viene abbassato il componente è pronto per una nuova esecuzione.
         </p>
         
         <h2>Codifica Working Zone</h2>
-        <p>Data una lista di <code>Nwz</code> working zone di dimensione fissa <code>Dwz</code>, la codifica permette di rappresentare gli indirizzi appartenenti a una di queste come numero della working zone <code>WZ_NUM</code> e offset rispetto all'indirizzo base di quest'ultima <code>WZ_OFFSET</code>. Il risultato ha un bit aggiuntivo <code>WZ_BIT</code> rispetto all'indirizzo codificato, posto a 1 se l'indirizzo è in una working zone, altrimenti a 0.
+        <p>Data una lista di <em>Nwz</em> working zone di dimensione fissa <em>Dwz</em>, la codifica permette di rappresentare gli indirizzi appartenenti a una di queste come numero della working zone WZ_NUM e offset rispetto all'indirizzo base di quest'ultima WZ_OFFSET. Il risultato ha un bit aggiuntivo WZ_BIT rispetto all'indirizzo codificato, posto a 1 se l'indirizzo è in una working zone, altrimenti a 0.
         </p>
-        <p>Se l'indirizzo da codificare <code>ADDR</code> appartiene a una working zone, il risultato è composto da <code>WZ_BIT</code> posto a 1, <code>WZ_NUM</code> codificato in binario e <code>WZ_OFFSET</code> codificato one-hot.
-        Altrimenti l'indirizzo non viene modificato e il risultato è <code>WZ_BIT</code> posto a 0 concatenato ad <code>ADDR</code>.
+        <p>Se l'indirizzo da codificare ADDR appartiene a una working zone, il risultato è composto da WZ_BIT posto a 1, WZ_NUM codificato in binario e WZ_OFFSET codificato one-hot.
+        Altrimenti l'indirizzo non viene modificato e il risultato è WZ_BIT posto a 0 concatenato ad ADDR.
         </p>
         <table class="minitab encode">
             <tr><th></th>
                 <th>Risultato</th></tr>
             <tr><td>ADDR &#x2208; WZ</td>
-                <td>0 & WZ_NUM & WZ_OFFSET</td></tr>
+                <td><code>0 & WZ_NUM & WZ_OFFSET</code></td></tr>
             <tr><td>ADDR &#x2209; WZ</td>
-                <td>1 & ADDR</td></tr>
+                <td><code>1 & ADDR</code></td></tr>
         </table>
-        <p>Dato che <code>WZ_NUM & WZ_OFFSET</code> ha dimensione uguale ad <code>ADDR</code> e <code>WZ_OFFSET</code> ha dimensione <code>Dwz</code> <span class="avoidwrap">(one-hot)</span>, il massimo numero di working zone utilizzabili per codificare indirizzi a <code>n</code>&nbsp;bit è <code>Nwz&nbsp;=&nbsp;2<sup>n&minus;Dwz</sup></code>.
+        <p>Dato che `WZ_NUM & WZ_OFFSET` ha dimensione uguale ad ADDR e WZ_OFFSET ha dimensione <em>Dwz</em> <span class="avoidwrap">(one-hot)</span>, il massimo numero di working zone utilizzabili per codificare indirizzi a <em>n</em>&nbsp;bit è <em>Nwz<sub>max</sub></em>&nbsp;=&nbsp;2<sup><em>n</em>&minus;<em>Dwz</em></sup>.
         </p>
         
         <h2>Struttura della memoria</h2>
@@ -81,12 +81,12 @@
         <table class="minitab memory">
             <tr><th>Indirizzo</th>
                 <th>Contenuto</th></tr>
-            <tr><td>0-7</td>
+            <tr><td><code>0-7</code></td>
                 <td>Indirizzi working zone</td></tr>
-            <tr><td>8</td>
+            <tr><td><code>8</code></td>
                 <td>Indirizzo da codificare</td></tr>
-            <tr><td>9</td>
-                <td><i>(Risultato della codifica)</i></td></tr>
+            <tr><td><code>9</code></td>
+                <td><em>(Risultato della codifica)</em></td></tr>
         </table>
         <p>La memoria con cui si interfaccia è indirizzabile al byte con indirizzi di 16 bit. Le celle di memoria da 0 a 7 contengono gli indirizzi delle 8 working zone e la cella all'indirizzo 8 contiene l'indirizzo da codificare. Il risultato della codifica viene scritto in memoria all'indirizzo 9.
         </p>

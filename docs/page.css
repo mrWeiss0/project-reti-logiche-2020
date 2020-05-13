@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?\
-family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&\
-family=Cormorant+SC:wght@300;400;500;600;700&\
-family=Ubuntu+Condensed&\
-family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&\
-family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700');
+family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&\
+family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&\
+family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&\
+family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900');
 
 @page {
     size: A4;
     margin: 20mm;
     @top-right {
-        font-family: Ubuntu, sans-serif;
-        font-weight: lighter;
+        font-family: Roboto, sans-serif;
+        font-weight: 100;
+        font-style: italic;
         content: string(doctitle, first-except);
     }
     @bottom {
-        font-family: "Cormorant Garamond", serif;
+        font-family: Roboto, sans-serif;
         content: counter(page);
     }
 }
@@ -31,8 +31,9 @@ family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700');
 /* General */
 
 body {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 12pt;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 10.5pt;
 }
 
 ul {
@@ -44,16 +45,18 @@ ul {
 h1 {
     string-set: doctitle content();
     page-break-before: always;
-    font-family: Ubuntu, sans-serif;
+    font-family: Roboto Slab, serif;
+    font-weight: 500;
 }
 
 h2, h3 {
-    font-family: Ubuntu, sans-serif;
-    font-weight: normal;
+    font-family: Roboto Slab, serif;
+    font-weight: 400;
 }
 
 code {
-    font-family: Ubuntu Mono, monospace;
+    font-family: Roboto Mono, monospace;
+    font-weight: 400;
 }
 
 a {
@@ -72,11 +75,22 @@ table {
     border-collapse: collapse;
 }
 
+table th {
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
 table td {
     vertical-align: baseline;
 }
 
-.avoidwrap{
+.cond {
+    font-family: Roboto Condensed, sans-serif;
+    font-weight: 300;
+}
+
+.avoidwrap {
     display: inline-block;
 }
 
@@ -95,7 +109,6 @@ table td {
 }
 
 #cover #title2 {
-    font-family: Ubuntu Condensed, sans-serif;
     font-size: 1.35em;
     margin: .8em 0;
 }
@@ -133,8 +146,8 @@ table td {
 
 #toc > ul > li {
     margin-top: 1em;
-    font-weight: bold;
-    font-family: Cormorant SC, serif;
+    font-family: Roboto Slab, serif;
+    font-weight: 500;
 }
 
 #toc > ul > li a:after {
@@ -148,12 +161,10 @@ table.interface td {
 }
 
 table.interface td:first-child {
-    font-family: Ubuntu Mono, monospace;
     padding-left: 10mm;
 }
 
 table.interface td:nth-child(2) {
-    font-family: Ubuntu Mono, monospace;
     text-align: right;
     padding-right: 10mm;
 }
@@ -171,11 +182,10 @@ table.interface td.mid {
 
 table.minitab {
     margin: .4em 10mm 1em;
+    line-height: 1.5;
 }
 
 table.minitab th {
-    text-align: left;
-    font-family: Ubuntu, sans-serif;
     padding-bottom: .6em;
 }
 
@@ -193,14 +203,6 @@ table.encode {
     margin: 0 auto;
 }
 
-table.encode td {
-    font-family: Ubuntu Mono, monospace;
-}
-
 table.memory {
     float: right;
-}
-
-table.memory td:first-child {
-    font-family: Ubuntu Mono, monospace;
 }
