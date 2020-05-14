@@ -69,6 +69,7 @@ download the executable.-->
 			<DESCRIPTION></DESCRIPTION>
 			<PPP>1</PPP>
 			<GUID></GUID>
+			<REF_POINT power='0' part='0' pos='0.00000,0.00000'/>
 			<TinyCAD>
 				<RECTANGLE a='0.00000,0.00000' b='-8.00000,-8.00000' style='0' fill='0'/>
 			</TinyCAD>
@@ -94,42 +95,40 @@ download the executable.-->
 			<FIELD type='0' description='Design' value='' show='1' pos='-14.00000,2.00000'/>
 			<FIELD type='1' description='Other' value='' show='0' pos='0.00000,0.00000'/>
 		</HIERARCHICAL_SYMBOL>
-		<HIERARCHICAL_SYMBOL pos='184.00000,78.00000' rotate='0' can_scale='0' scale_x='1.00000' scale_y='1.00000' file='.\convert.dsn'>
+		<HIERARCHICAL_SYMBOL pos='180.00000,78.00000' rotate='0' can_scale='0' scale_x='1.00000' scale_y='1.00000' file='.\convert.dsn'>
 			<FIELD type='0' description='Ref' value='' show='1' pos='0.00000,0.00000'/>
 			<FIELD type='0' description='Design' value='' show='1' pos='-30.00000,-28.00000'/>
 			<FIELD type='1' description='Other' value='' show='0' pos='0.00000,0.00000'/>
 		</HIERARCHICAL_SYMBOL>
 		<WIRE a='66.00000,38.00000' b='86.00000,38.00000'/>
 		<WIRE a='66.00000,66.00000' b='86.00000,66.00000'/>
-		<WIRE style='2' a='124.00000,62.00000' b='150.00000,62.00000'/>
-		<WIRE a='150.00000,54.00000' b='134.00000,54.00000'/>
+		<WIRE style='2' a='124.00000,62.00000' b='146.00000,62.00000'/>
+		<WIRE a='146.00000,54.00000' b='132.00000,54.00000'/>
 		<WIRE a='86.00000,34.00000' b='66.00000,34.00000'/>
-		<WIRE style='3' a='184.00000,74.00000' b='216.00000,74.00000'/>
-		<RECTANGLE a='82.00000,26.00000' b='188.00000,82.00000' style='5' fill='0'/>
+		<WIRE style='3' a='180.00000,74.00000' b='204.00000,74.00000'/>
+		<RECTANGLE a='82.00000,26.00000' b='184.00000,82.00000' style='5' fill='0'/>
 		<LABEL pos='66.00000,34.00000' direction='3' font='3' color='208000' style='1'>i_clk</LABEL>
 		<LABEL pos='66.00000,38.00000' direction='3' font='3' color='208000' style='1'>i_rst</LABEL>
 		<LABEL pos='66.00000,66.00000' direction='3' font='3' color='208000' style='1'>i_start</LABEL>
 		<LABEL pos='66.00000,74.00000' direction='3' font='3' color='208000' style='1'>i_data</LABEL>
-		<LABEL pos='216.00000,34.00000' direction='2' font='3' color='208000' style='2'>o_en</LABEL>
-		<LABEL pos='216.00000,42.00000' direction='2' font='3' color='208000' style='2'>o_we</LABEL>
-		<LABEL pos='216.00000,38.00000' direction='2' font='3' color='208000' style='2'>o_done</LABEL>
-		<LABEL pos='216.00000,54.00000' direction='2' font='3' color='208000' style='2'>o_address</LABEL>
-		<LABEL pos='216.00000,74.00000' direction='2' font='3' color='208000' style='2'>o_data</LABEL>
-		<LABEL pos='134.00000,54.00000' direction='3' font='3' color='208000' style='0'>i_clk</LABEL>
-		<WIRE style='3' a='150.00000,74.00000' b='66.00000,74.00000'/>
+		<LABEL pos='204.00000,34.00000' direction='2' font='3' color='208000' style='2'>o_en</LABEL>
+		<LABEL pos='204.00000,42.00000' direction='2' font='3' color='208000' style='2'>o_we</LABEL>
+		<LABEL pos='204.00000,38.00000' direction='2' font='3' color='208000' style='2'>o_done</LABEL>
+		<LABEL pos='204.00000,46.00000' direction='2' font='3' color='208000' style='2'>o_address</LABEL>
+		<LABEL pos='204.00000,74.00000' direction='2' font='3' color='208000' style='2'>o_data</LABEL>
+		<LABEL pos='132.00000,54.00000' direction='3' font='3' color='208000' style='0'>i_clk</LABEL>
+		<WIRE style='3' a='146.00000,74.00000' b='66.00000,74.00000'/>
 		<BUSNAME pos='68.00000,74.00000' direction='3' font='3' color='208000'>data_sz</BUSNAME>
-		<BUSNAME pos='132.00000,74.00000' direction='3' font='3' color='208000'>data_sz-1</BUSNAME>
-		<BUSNAME pos='202.00000,74.00000' direction='3' font='3' color='208000'>data_sz</BUSNAME>
-		<BUSNAME pos='128.00000,46.00000' direction='3' font='3' color='208000'>log2(Nwz+2)</BUSNAME>
+		<BUSNAME pos='130.00000,74.00000' direction='3' font='3' color='208000'>data_sz-1</BUSNAME>
+		<BUSNAME pos='190.00000,74.00000' direction='3' font='3' color='208000'>data_sz</BUSNAME>
+		<BUSNAME pos='126.00000,46.00000' direction='3' font='3' color='208000'>log2(Nwz+2)</BUSNAME>
 		<TEXT pos='82.00000,29.00000' direction='3' font='3' color='000000'>main</TEXT>
-		<WIRE a='124.00000,66.00000' b='150.00000,66.00000'/>
-		<BUSNAME pos='132.00000,62.00000' direction='3' font='3' color='208000'>log2(Nwz)</BUSNAME>
-		<WIRE a='124.00000,42.00000' b='216.00000,42.00000'/>
-		<WIRE a='124.00000,38.00000' b='216.00000,38.00000'/>
-		<WIRE a='124.00000,34.00000' b='216.00000,34.00000'/>
-		<TEXT pos='196.00000,54.00000' direction='3' font='3' color='000000'>(zero-padded)</TEXT>
-		<WIRE style='4' a='192.00000,46.00000' b='192.00000,54.00000'/>
-		<WIRE style='4' a='124.00000,46.00000' b='192.00000,46.00000'/>
-		<WIRE style='4' a='192.00000,54.00000' b='216.00000,54.00000'/>
+		<WIRE a='124.00000,66.00000' b='146.00000,66.00000'/>
+		<BUSNAME pos='130.00000,62.00000' direction='3' font='3' color='208000'>log2(Nwz)</BUSNAME>
+		<WIRE a='124.00000,42.00000' b='204.00000,42.00000'/>
+		<WIRE a='124.00000,38.00000' b='204.00000,38.00000'/>
+		<WIRE a='124.00000,34.00000' b='204.00000,34.00000'/>
+		<TEXT pos='186.00000,46.00000' direction='3' font='3' color='000000'>(zero-padded)</TEXT>
+		<WIRE style='4' a='124.00000,46.00000' b='204.00000,46.00000'/>
 	</TinyCAD>
 </TinyCADSheets>

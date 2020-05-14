@@ -584,10 +584,10 @@ download the executable.-->
 		<WIRE a='171.50000,32.00000' b='171.50000,55.50000'/>
 		<WIRE a='194.50000,58.50000' b='199.50000,58.50000'/>
 		<WIRE a='199.50000,53.50000' b='194.50000,53.50000'/>
-		<WIRE a='221.50000,82.00000' b='265.00000,82.00000'/>
+		<WIRE a='221.50000,82.00000' b='260.00000,82.00000'/>
 		<WIRE a='221.50000,82.00000' b='152.50000,82.00000'/>
 		<WIRE a='152.50000,82.00000' b='152.50000,64.50000'/>
-		<LABEL pos='26.50000,32.00000' direction='3' font='5' color='208000' style='1'>start</LABEL>
+		<LABEL pos='108.50000,32.00000' direction='3' font='5' color='208000' style='1'>start</LABEL>
 		<SYMBOL id='4' pos='247.50000,60.50000' part='0' rotate='7' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='U3' show='0' pos='-17.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='INHIBIT' show='0' pos='-14.00000,-10.00000'/>
@@ -599,7 +599,7 @@ download the executable.-->
 			<HINT pin='3' net='9'/>
 		</SYMBOL>
 		<WIRE a='221.50000,58.50000' b='221.50000,82.00000'/>
-		<WIRE style='5' a='247.50000,55.50000' b='265.00000,55.50000'/>
+		<WIRE style='5' a='247.50000,55.50000' b='260.00000,55.50000'/>
 		<SYMBOL id='8' pos='139.50000,61.50000' part='0' rotate='3' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='U1' show='0' pos='-16.00000,2.00000'/>
 			<FIELD type='0' description='Name' value='REG_SYNC' show='1' pos='-14.00000,3.00000'/>
@@ -612,12 +612,12 @@ download the executable.-->
 			<HINT pin='3' net='3'/>
 			<HINT pin='4' net='9'/>
 		</SYMBOL>
-		<LABEL pos='265.00000,55.50000' direction='2' font='5' color='208000' style='2'>mem_en</LABEL>
-		<LABEL pos='265.00000,82.00000' direction='2' font='5' color='208000' style='2'>done</LABEL>
-		<LABEL pos='265.00000,96.50000' direction='2' font='5' color='208000' style='2'>mem_we</LABEL>
-		<WIRE a='145.50000,96.50000' b='265.00000,96.50000'/>
+		<LABEL pos='260.00000,55.50000' direction='2' font='5' color='208000' style='2'>mem_en</LABEL>
+		<LABEL pos='260.00000,82.00000' direction='2' font='5' color='208000' style='2'>done</LABEL>
+		<LABEL pos='260.00000,96.50000' direction='2' font='5' color='208000' style='2'>mem_we</LABEL>
+		<WIRE a='145.50000,96.50000' b='260.00000,96.50000'/>
 		<WIRE a='139.50000,58.50000' b='145.50000,58.50000'/>
-		<WIRE a='26.50000,32.00000' b='171.50000,32.00000'/>
+		<WIRE a='108.50000,32.00000' b='171.50000,32.00000'/>
 		<SYMBOL id='4' pos='119.50000,77.50000' part='0' rotate='4' can_scale='0' show_power='0' scale_x='1.00000' scale_y='1.00000'>
 			<FIELD type='1' description='Ref' value='U7' show='0' pos='1.00000,-15.00000'/>
 			<FIELD type='0' description='Name' value='INHIBIT' show='0' pos='-14.00000,-10.00000'/>
@@ -691,15 +691,15 @@ download the executable.-->
 			<HINT pin='3' net='17'/>
 			<HINT pin='4' net='9'/>
 		</SYMBOL>
-		<WIRE style='2' a='152.50000,113.50000' b='265.00000,113.50000'/>
-		<WIRE style='2' a='224.00000,139.00000' b='265.00000,139.00000'/>
-		<LABEL pos='265.00000,139.00000' direction='2' font='5' color='208000' style='2'>wz_id</LABEL>
-		<LABEL pos='265.00000,113.50000' direction='2' font='5' color='208000' style='2'>mem_addr</LABEL>
+		<WIRE style='2' a='152.50000,113.50000' b='260.00000,113.50000'/>
+		<WIRE style='2' a='224.00000,139.00000' b='260.00000,139.00000'/>
+		<LABEL pos='260.00000,139.00000' direction='2' font='5' color='208000' style='2'>wz_id</LABEL>
+		<LABEL pos='260.00000,113.50000' direction='2' font='5' color='208000' style='2'>mem_addr</LABEL>
 		<WIRE a='145.50000,96.50000' b='145.50000,82.00000'/>
 		<WIRE style='4' a='69.50000,139.00000' b='208.00000,139.00000'/>
 		<LABEL pos='58.00000,91.50000' direction='3' font='5' color='208000' style='0'>wz_id_st</LABEL>
 		<LABEL pos='108.50000,48.50000' direction='3' font='5' color='208000' style='1'>clk</LABEL>
-		<LABEL pos='108.50000,36.50000' direction='3' font='5' color='208000' style='1'>rst</LABEL>
+		<LABEL pos='108.50000,40.00000' direction='3' font='5' color='208000' style='1'>rst</LABEL>
 		<WIRE a='108.50000,48.50000' b='123.50000,48.50000'/>
 		<WIRE a='194.50000,53.50000' b='194.50000,41.50000'/>
 		<WIRE a='207.50000,48.50000' b='207.50000,41.50000'/>
@@ -710,8 +710,8 @@ download the executable.-->
 		<WIRE a='216.00000,124.00000' b='216.00000,117.50000'/>
 		<LABEL pos='216.00000,117.50000' direction='1' font='5' color='208000' style='0'>rst</LABEL>
 		<LABEL pos='203.00000,117.50000' direction='1' font='5' color='208000' style='0'>clk</LABEL>
-		<WIRE a='108.50000,36.50000' b='131.50000,36.50000'/>
-		<WIRE a='131.50000,36.50000' b='131.50000,43.50000'/>
+		<WIRE a='108.50000,40.00000' b='131.50000,40.00000'/>
+		<WIRE a='131.50000,40.00000' b='131.50000,43.50000'/>
 		<WIRE a='42.00000,81.50000' b='37.00000,81.50000'/>
 		<WIRE a='37.00000,81.50000' b='37.00000,69.50000'/>
 		<WIRE a='50.00000,76.50000' b='50.00000,69.50000'/>
@@ -801,8 +801,8 @@ download the executable.-->
 		<LABEL pos='203.50000,143.00000' direction='1' font='5' color='208000' style='0'>rst</LABEL>
 		<LABEL pos='190.50000,143.00000' direction='1' font='5' color='208000' style='0'>clk</LABEL>
 		<WIRE style='5' a='195.50000,159.50000' b='180.00000,159.50000'/>
-		<LABEL pos='265.00000,164.50000' direction='2' font='5' color='208000' style='2'>convert</LABEL>
-		<WIRE a='211.50000,164.50000' b='265.00000,164.50000'/>
+		<LABEL pos='260.00000,164.50000' direction='2' font='5' color='208000' style='2'>convert</LABEL>
+		<WIRE a='211.50000,164.50000' b='260.00000,164.50000'/>
 		<RECTANGLE a='175.50000,174.50000' b='233.50000,115.50000' style='7' fill='0'/>
 		<TEXT pos='226.00000,119.00000' direction='3' font='4' color='000000'>delay</TEXT>
 		<BUSNAME pos='121.00000,118.50000' direction='3' font='3' color='208000'>log2(Nwz+2)</BUSNAME>
