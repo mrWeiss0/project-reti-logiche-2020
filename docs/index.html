@@ -196,6 +196,16 @@
         </table>
         <figure><object data="schematic/encode.svg"></object></figure>
         
+        <h1>Test</h1>
+        <p>I moduli <code>control</code> e <code>convert</code> sono stati testati con unit test qualitativi usando valori dei parametri minori, per rendere più semplice il debugging guardando la forma d'onda in risposta a un ingresso noto.
+        </p>
+        <p>Gli integration test sono gestiti da una <code>procedure</code>, comune a tutti i testbench, che esegue i test in batch. Ogni insieme di working zone viene testato convertendo diversi indirizzi in esecuzioni consecutive e verificandone la correttezza rispetto al valore atteso, dopo viene dato il reset e si passa al test successivo.
+        </p>
+        <p>I dati di ogni testbench sono generati da uno script Python che calcola il valore atteso per ogni indirizzo da convertire, con indirizzi da testare dati o generati casualmente. Nei test generati gli indirizzi delle working zone non sono ordinati. Siccome con indirizzi a 7 bit il range è molto limitato, ogni set di working zone è stato testato con tutti i 128 indirizzi possibili, in ordine sparso.
+        </p>
+        <p>Il modulo <code>main</code> è stato testato anche con parametri diversi da quelli utilizzati nel componente, verificandone il funzionamento in vari casi, tra cui con un numero di working zone minore del massimo, con una sola working zone, con working zone di un solo indirizzo.
+        </p>
+        
         <h1>Sintesi e simulazione</h1>
         <p>Il componente è sintetizzabile correttamente con tre diversi warning dovuti alla configurazione dei segnali:
         </p>
