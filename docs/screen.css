@@ -29,6 +29,11 @@ a[href]:hover {
     text-decoration: underline;
 }
 
+pre {
+    white-space: pre;
+    overflow: auto;
+}
+
 #abstract {
     max-width: 160mm;
 }

@@ -39,7 +39,12 @@ body {
 ul {
     list-style: none;
     margin-left: 0;
+    padding-left: 10mm;
+}
+
+li {
     padding-left: 0;
+    margin-left: 0;
 }
 
 h1 {
@@ -53,6 +58,15 @@ h2, h3 {
     font-family: Roboto Slab, serif;
     page-break-after: avoid;
     font-weight: 400;
+}
+
+pre {
+    font-family: Roboto Mono, monospace;
+    white-space: pre-wrap;
+    page-break-inside: avoid;
+    background: #FBFBFB;
+    border-left: 1mm solid #DDD;
+    padding: 1em 10mm;
 }
 
 code {
@@ -92,6 +106,10 @@ table td {
 figure {
     margin: 1em 0;
     padding: 5mm;
+}
+
+dt {
+    margin-top: 1em;
 }
 
 .cond {
@@ -148,15 +166,6 @@ figure {
 
 #toc {
     font-size: 1.15em;
-}
-
-#toc ul {
-    padding-left: 10mm;
-}
-
-#toc li {
-    padding-left: 0;
-    margin-left: 0;
 }
 
 #toc > ul > li {

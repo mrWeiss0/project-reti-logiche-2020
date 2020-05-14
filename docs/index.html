@@ -96,7 +96,7 @@
         <h1>Implementazione</h1>
         <p>Il componente è stato progettato in modo modulare e parametrico. Il modulo principale, <code>main</code>, dichiara tre parametri generic: <em>data_sz</em>, dimensione dell'output, <em>Dwz</em> e <em>Nwz</em>, che possono essere assegnati arbitrariamente col vincolo <em>Nwz</em>&leq;2<sup><em>data_sz</em>&minus;1&minus;<em>Dwz</em></sup> perché il numero di working zone sia rappresentabile nella dimensione data.
         </p>
-        <p>Le working zone lette vengono salvate in registri interni, così da poter confrontare velocemente diversi indirizzi con lo stesso set di working zone. Il componente impiega un ciclo di clock per ogni working zone letta, uno per leggere l'indirizzo da codificare e uno per scrive il risultato, in totale 7+2=9 cicli di clock per la prima codifica, 2 per le codifiche successive, escluso l'overhead del protocollo (aspettare che venga abbassato e poi rialzato il segnale di start).
+        <p>Le working zone lette vengono salvate in registri interni, così da poter confrontare velocemente diversi indirizzi con lo stesso set di working zone. Il componente impiega un ciclo di clock per ogni working zone letta, uno per leggere l'indirizzo da codificare e uno per scrive il risultato, in totale 7+2&nbsp;=&nbsp;9 cicli di clock per la prima codifica, 2 per le codifiche successive, escluso l'overhead del protocollo (aspettare che venga abbassato e poi rialzato il segnale di start).
         </p>
         <p>L'entità top level, <code>project_reti_logiche</code>, istanzia il modulo principale <code>main</code> con i parametri <em>data_sz</em>=8, <em>Dwz</em>=4, <em>Nwz</em>=8, e fornisce l'interfaccia esterna del componente. Gli indirizzi in ingresso hanno dimensione <em>data_sz</em>&minus;1, perciò l'ultimo bit dei dati letti dalla memoria non è significativo e rimane scollegato; inoltre il componente internamente ignora la dimensione della memoria da cui legge i dati e usa indirizzi di log<sub>2</sub>(<em>Nwz</em>+2)&nbsp;bit (4&nbsp;bit con 8 working zone), la dimensione minima per rappresentare il range di indirizzi utilizzati, l'interfaccia esterna estende l'indirizzo alla dimensione corretta, che in questo caso è 16&nbsp;bit.
         </p>
@@ -195,6 +195,77 @@
             <td>il risultato della codifica escluso <em>WZ_BIT</em> se <code>match</code> vale 1, altrimenti tutti i bit sono posti a 0</td></tr>
         </table>
         <figure><object data="schematic/encode.svg"></object></figure>
+        
+        <h1>Sintesi e simulazione</h1>
+        <p>Il componente è sintetizzabile correttamente con tre diversi warning dovuti alla configurazione dei segnali:
+        </p>
+        <dl>
+        <dt><code>port o_address[4] driven by constant 0</code></dt>
+            <dd>ripetuto dal bit 4 al bit 15, dovuto al fatto che quei bit di indirizzo non sono mai usati e sono aggiunti solo per interfacciarsi con la memoria.</dd>
+        <dt><code>unconnected port i_data[7]</code></dt>
+            <dd>siccome gli indirizzi sono a 7 bit il bit 7 dei dati letti dalla memoria non è utilizzato.</dd>
+        <dt><code>null assignment ignored</code></dt>
+            <dd>generato nel modulo <code>control</code> da un'estensione del segnale <code>wz_id_st</code> da log<sub>2</sub>(<em>Nwz</em>+1) bit a log<sub>2</sub>(<em>Nwz</em>+2) bit. In generale l'estensione è necessaria, ma nel caso considerato <span class="avoidwrap">log<sub>2</sub>(9)&nbsp;= log<sub>2</sub>(10)&nbsp;=&nbsp;4 (<em>ceil</em>)</span> e per questo è ignorata.</dd>
+        </dl>
+        <p>Oltre che in <em>Behavioral</em>, il componente sintetizzato passa tutti i test in <em>Post Synthesis Simulation</em>, sia <em>Functional</em> che <em>Timing</em>, con un periodo di clock che può essere portato fino a un minimo di 8ns.
+        </p>
+        
+        <h2>Report</h2>
+        <p>Il componente viene sintetizzato con <span class="avoidwrap">106 LUT</span> e <span class="avoidwrap">66 FF</span>. Di seguito i punti salienti del report di sintesi:
+        </p>
+<pre>
+Hierarchical RTL Component report
+Module control
+Detailed RTL Component Info :
++---Adders :
+	   2 Input      4 Bit       Adders := 2
++---Registers :
+	                4 Bit    Registers := 1
+	                3 Bit    Registers := 1
+	                1 Bit    Registers := 3
+Module encode
+Detailed RTL Component Info :
++---Adders :
+	   3 Input      8 Bit       Adders := 1
+Module convert
+Detailed RTL Component Info :
++---Registers :
+	                7 Bit    Registers := 8
++---Muxes :
+	   2 Input      8 Bit        Muxes := 1
+</pre>
+<pre>
+Report Cell Usage:
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |     1|
+|4     |LUT2   |    62|
+|5     |LUT3   |     4|
+|6     |LUT4   |    10|
+|7     |LUT5   |     1|
+|8     |LUT6   |    32|
+|9     |FDRE   |    66|
+|10    |IBUF   |    10|
+|11    |OBUF   |    27|
++------+-------+------+
+</pre>
+<pre>
+Report Instance Areas:
++------+-----------------------------+---------+------+
+|      |Instance                     |Module   |Cells |
++------+-----------------------------+---------+------+
+|1     |top                          |         |   230|
+|2     |  main_u                     |main     |   192|
+|3     |    control_u                |control  |    22|
+|4     |    convert_u                |convert  |   170|
+|5     |      \encode_l[0].encode_u  |encode   |     9|
+|      |      \...                   |...      |     9|
+|12    |      \encode_l[7].encode_u  |...      |     9|
++------+-----------------------------+---------+------+
+</pre>
     </div>
 </body>
 </html>
