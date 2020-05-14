@@ -92,7 +92,6 @@ def main():
 template = """-- Testbench generated in python
 library ieee;
 use ieee.std_logic_1164.all;
-use work.common.all;
 
 package test_data is
     constant clock_period  : time     := {clock_period};
