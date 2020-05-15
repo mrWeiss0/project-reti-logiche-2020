@@ -101,14 +101,14 @@
         
         <div class="section">
         <h1>Implemen&#x200b;ta&#x200b;zio&#x200b;ne</h1>
-        <p>Il componente è stato progettato in modo modulare e parametrico. Il modulo principale, <code>main</code>, dichiara tre parametri generic: <em>data_sz</em>, dimensione dell'output, <em>Dwz</em> e <em>Nwz</em>, che possono essere assegnati arbitrariamente col vincolo <span class="avoidwrap"><em>Nwz</em>&nbsp;&leq; 2<sup><em>data_sz</em>&minus;1&minus;<em>Dwz</em></sup></span> perché il numero di working zone sia rappresentabile nella dimensione data.
+        <p>Il componente è stato progettato in modo modulare e parametrico. Il modulo principale, <code>main</code>, dichiara tre parametri generic: <em>data_sz</em> (dimensione dell'output), <em>Dwz</em> e <em>Nwz</em>, che possono essere assegnati arbitrariamente col vincolo <span class="avoidwrap"><em>Nwz</em>&nbsp;&leq; 2<sup><em>data_sz</em>&minus;1&minus;<em>Dwz</em></sup></span> perché il numero di working zone sia rappresentabile nella dimensione data.
         </p>
-        <p>Le working zone lette vengono salvate in registri interni, così da poter confrontare velocemente diversi indirizzi con lo stesso set di working zone. Il componente impiega un ciclo di clock per ogni working zone letta, uno per leggere l'indirizzo da codificare e uno per scrive il risultato, in totale 7+2&nbsp;=&nbsp;9 cicli di clock per la prima codifica, 2 per le codifiche successive, escluso l'overhead del protocollo (aspettare che venga abbassato e poi rialzato il segnale di start).
+        <p>Le working zone lette vengono salvate in registri interni, così da poter confrontare velocemente diversi indirizzi con lo stesso set di working zone. Il componente impiega un ciclo di clock per ogni working zone letta, uno per leggere l'indirizzo da codificare e uno per scrive il risultato, in totale 8+2&nbsp;=&nbsp;10 cicli di clock per la prima codifica, 2 per le codifiche successive, escluso l'overhead del protocollo (aspettare che venga abbassato e poi rialzato il segnale di start).
         </p>
         <p>L'entità top level, <code>project_reti_logiche</code>, istanzia il modulo principale <code>main</code> con i parametri <em>data_sz</em>=8, <em>Dwz</em>=4, <em>Nwz</em>=8, e fornisce l'interfaccia esterna del componente. Gli indirizzi in ingresso hanno dimensione <em>data_sz</em>&minus;1, perciò l'ultimo bit dei dati letti dalla memoria non è significativo e rimane scollegato; inoltre il componente internamente ignora la dimensione della memoria da cui legge i dati e usa indirizzi di log<sub>2</sub>(<em>Nwz</em>+2)&nbsp;bit (4&nbsp;bit con 8 working zone), la dimensione minima per rappresentare il range di indirizzi utilizzati, l'interfaccia esterna estende l'indirizzo alla dimensione corretta, che in questo caso è 16&nbsp;bit.
         </p>
         <figure>
-            <figcaption>project_reti_logiche</figcaption>
+            <figcaption>project_reti_logiche top level schematic</figcaption>
             <object data="schematic/project_reti_logiche.svg"></object>
         </figure>
         <p>L'entità <code>main</code> istanzia e collega i due moduli che costituiscono il componente: <code>control</code> e <code>convert</code>. Il primo si occupa del controllo dell'esecuzione, il secondo esegue la conversione degli indirizzi in ingresso.
@@ -142,11 +142,11 @@
             <td>posto a 1 se il dato in lettura è l'indirizzo da convertire e wz_id non è significativo</td></tr>
         </table>
         <figure>
-            <figcaption>control</figcaption>
+            <figcaption>control schematic</figcaption>
             <object data="schematic/control.svg"></object>
         </figure>
         <p>Internamente il modulo ha tre registri di stato: <code>wz_id_st</code>, <code>write_s</code> e <code>done_s</code>.
-        <code>wz_id_st</code> è il contatore del numero di working zone lette dalla memoria e incrementa ogni ciclo di clock man mano che queste vengono lette e salvate, fino al valore <em>Nwz</em>, valore mantenuto anche fra esecuzioni successive. Il valore <em>Nwz</em> segnala che sono state lette tutte le working zone e viene letto nel ciclo corrente l'indirizzo da convertire, quindi prepara per il ciclo successivo lo stato <code>write_s</code> a 1. <code>write_s</code> resta alto per un ciclo di clock in cui avviene la scrittura all'indirizzo <em>Nwz+1</em>, selezionato da un muxer. Nel ciclo successivo viene alzato <code>done_s</code> che resta alto finché <code>start</code> non diventa 0.
+        <code>wz_id_st</code> è il contatore del numero di working zone lette dalla memoria e incrementa ogni ciclo di clock man mano che queste vengono lette e salvate, fino al valore <em>Nwz</em>, valore mantenuto anche fra esecuzioni successive. Il valore <em>Nwz</em> segnala che sono state lette tutte le working zone e viene letto nel ciclo corrente l'indirizzo da convertire, quindi prepara per il ciclo successivo lo stato <code>write_s</code> a 1. <code>write_s</code> resta alto per un ciclo di clock in cui avviene la scrittura all'indirizzo <em>Nwz</em>+1, selezionato da un muxer. Nel ciclo successivo viene alzato <code>done_s</code> che resta alto finché <code>start</code> non diventa 0.
         </p>
         <p>Di seguito le tabelle di transizione per gli stati <code>write_s</code> e <code>done_s</code> con i valori dei segnali assunti durante l'esecuzione
         </p>
@@ -163,6 +163,7 @@
                 <th>write_s</th>
                 <th>start</th>
                 <th>done_s'</th></tr>
+            <tr><td><code>0</code></td><td><code>0</code></td><td><code>0</code></td><td><code>0</code></td></tr>
             <tr><td><code>0</code></td><td><code>0</code></td><td><code>1</code></td><td><code>0</code></td></tr>
             <tr><td><code>0</code></td><td><code>1</code></td><td><code>1</code></td><td><code>1</code></td></tr>
             <tr><td><code>1</code></td><td><code>0</code></td><td><code>1</code></td><td><code>1</code></td></tr>
@@ -191,18 +192,18 @@
             <td>risultato della conversione</td></tr>
         </table>
         <figure>
-            <figcaption>convert</figcaption>
+            <figcaption>convert schematic</figcaption>
             <object data="schematic/convert.svg"></object>
         </figure>
-        <p>Il modulo salva gli indirizzi base delle working zone e confronta l'indirizzo in ingresso con ognuna in parallelo, istanziando un sottomodulo <code>encode</code> per ogni working zone. Se c'è un match, l'indirizzo in uscita è l'indirizzo codificato con il bit <em>WZ_BIT</em> posto a 1, in caso contrario un muxer seleziona l'indirizzo in ingresso e concatena <em>WZ_BIT</em> a 0.
+        <p>Il modulo salva gli indirizzi base delle working zone e confronta l'indirizzo in ingresso con ognuna in parallelo, istanziando un sottomodulo <code>encode</code> per ogni working zone. Se c'è un match, l'indirizzo in uscita è l'indirizzo codificato con il bit WZ_BIT posto a 1, in caso contrario un muxer seleziona l'indirizzo in ingresso e concatena WZ_BIT a 0.
         </p>
-        <p>L'indirizzo codificato è selezionato con una catena di <em>or</em> collegati ai moduli <code>encode</code>, che hanno output a 0 in caso di mismatch. Da contratto le working zone non devono sovrapporsi, in caso contrario se si ha un match multiplo a causa di una configurazione sbagliata degli indirizzi base, l'output è un valore non valido.
+        <p>L'indirizzo codificato è selezionato con una catena di <em>or</em> collegati ai moduli <code>encode</code>, che hanno output a 0 in caso di mismatch. Da contratto le working zone non devono sovrapporsi, in caso contrario se si ha un match multiplo a causa di una configurazione sbagliata degli indirizzi base, l'output ha un valore non valido.
         </p>
         </div>
         
         <div class="section">
         <h3>Encode</h3>
-        <p>Questo è un sottomodulo combinatorio che confronta l'indirizzo selezionato con l'indirizzo base di una working zone e in caso di match calcola la codifica dell'indirizzo. Ha un parametro aggiuntivo, <em>id</em>, ovvero l'indice della working zone di riferimento <em>WZ_NUM</em> usato per comporre il risultato.
+        <p>Questo è un sottomodulo combinatorio che confronta l'indirizzo selezionato con l'indirizzo base di una working zone e in caso di match calcola la codifica dell'indirizzo. Ha un parametro aggiuntivo, <em>id</em>, ovvero l'indice della working zone di riferimento WZ_NUM necessario per comporre il risultato.
         </p>
         <table class="interface">
         <tr><th class="mid" colspan="3">Ingressi:</th></tr>
@@ -214,19 +215,19 @@
         <tr><td><code>match</code></td><td></td>
             <td>posto a 1 se l'indirizzo appartiene alla working zone</td></tr>
         <tr><td><code>address_out</code></td><td><code>[data_sz&minus;1]</code></td>
-            <td>il risultato della codifica escluso <em>WZ_BIT</em> se <code>match</code> vale 1, altrimenti tutti i bit sono posti a 0</td></tr>
+            <td>il risultato della codifica escluso WZ_BIT se <code>match</code> vale 1, altrimenti tutti i bit sono posti a 0</td></tr>
         </table>
         <figure>
-            <figcaption>encode</figcaption>
+            <figcaption>encode schematic</figcaption>
             <object data="schematic/encode.svg"></object>
         </figure>
         </div>
         
         <div class="section">
         <h1>Test</h1>
-        <p>I moduli <code>control</code> e <code>convert</code> sono stati testati con unit test qualitativi usando valori dei parametri minori, per rendere più semplice il debugging guardando la forma d'onda in risposta a un ingresso noto.
+        <p>L'approccio modulare ha consentito di testare oltre al componente nell'insieme anche le singole parti indipendentemente. I moduli <code>control</code> e <code>convert</code> sono stati testati con unit test qualitativi usando valori dei parametri minori, per rendere più semplice il debugging guardando la forma d'onda in risposta a un ingresso noto.
         </p>
-        <p>Gli integration test sono gestiti da una <code>procedure</code>, comune a tutti i testbench, che esegue i test in batch. Ogni insieme di working zone viene testato convertendo diversi indirizzi in esecuzioni consecutive e verificandone la correttezza rispetto al valore atteso, dopo viene dato il reset e si passa al test successivo.
+        <p>Gli integration test invece sono gestiti da una <code>procedure</code>, comune a tutti i testbench, che esegue i test in batch. Ogni insieme di working zone viene testato convertendo diversi indirizzi in esecuzioni consecutive e verificandone automaticamente la correttezza rispetto al valore atteso, dopo viene dato il reset e si passa al test successivo.
         </p>
         <p>I dati di ogni testbench sono generati da uno script Python che calcola il valore atteso per ogni indirizzo da convertire, con indirizzi da testare dati o generati casualmente. Nei test generati gli indirizzi delle working zone non sono ordinati. Siccome con indirizzi a 7 bit il range è molto limitato, ogni set di working zone è stato testato con tutti i 128 indirizzi possibili, in ordine sparso.
         </p>
@@ -236,15 +237,15 @@
         
         <div class="section">
         <h1>Sintesi e simulazione</h1>
-        <p>Il componente è sintetizzabile correttamente con tre diversi warning dovuti alla configurazione dei segnali:
+        <p>Il componente è sintetizzabile correttamente con tre diversi warning dovuti alla configurazione dei segnali che non causano effetti collaterali o problemi:
         </p>
         <dl>
         <dt><code>port o_address[4] driven by constant 0</code></dt>
             <dd>ripetuto dal bit 4 al bit 15, dovuto al fatto che quei bit di indirizzo non sono mai usati e sono aggiunti solo per interfacciarsi con la memoria.</dd>
         <dt><code>unconnected port i_data[7]</code></dt>
-            <dd>siccome gli indirizzi sono a 7 bit il bit 7 dei dati letti dalla memoria non è utilizzato.</dd>
+            <dd>siccome gli indirizzi sono a 7 bit, il bit 7 dei dati letti dalla memoria non è utilizzato.</dd>
         <dt><code>null assignment ignored</code></dt>
-            <dd>generato nel modulo <code>control</code> da un'estensione del segnale <code>wz_id_st</code> da log<sub>2</sub>(<em>Nwz</em>+1) bit a log<sub>2</sub>(<em>Nwz</em>+2) bit. In generale l'estensione è necessaria, ma nel caso considerato <span class="avoidwrap">log<sub>2</sub>(9)&nbsp;= log<sub>2</sub>(10)&nbsp;=&nbsp;4 (<em>ceil</em>)</span> e per questo è ignorata.</dd>
+            <dd>generato nel modulo <code>control</code> da un'estensione del segnale <code>wz_id_st</code> da log<sub>2</sub>(<em>Nwz</em>+1) bit a log<sub>2</sub>(<em>Nwz</em>+2) bit. Per generalità l'estensione è necessaria, ma nel caso considerato <span class="avoidwrap">log<sub>2</sub>(9)&nbsp;= log<sub>2</sub>(10)&nbsp;=&nbsp;4 (<em>ceil</em>)</span> e per questo viene ignorata.</dd>
         </dl>
         <p>Oltre che in <em>Behavioral</em>, il componente sintetizzato passa tutti i test in <em>Post Synthesis Simulation</em>, sia <em>Functional</em> che <em>Timing</em>, con un periodo di clock che può essere portato fino a un minimo di 8ns.
         </p>
@@ -304,7 +305,7 @@ Report Instance Areas:
 |3     |    control_u                |control  |    22|
 |4     |    convert_u                |convert  |   170|
 |5     |      \encode_l[0].encode_u  |encode   |     9|
-|      |      \...                   |...      |     9|
+|6-11  |      \encode_l[...          |...      |     9|
 |12    |      \encode_l[7].encode_u  |...      |     9|
 +------+-----------------------------+---------+------+
 </pre>
