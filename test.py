@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Test generator for VHDL code
 
-usege: python generate.py [SECTION...]
+usage: python test.py [SECTION...]
 
 This script will generate data for testbenchs in VHDL
-with the parameters in the ``generate.ini`` configuration file,
+with the parameters in the ``test.ini`` configuration file,
 in which each section describes a testbench.
 Tests are generated in a file with the name of its section.
 Specific sections to be generated can be specified as arguments,
@@ -45,7 +45,7 @@ from os import path, makedirs
 from configparser import ConfigParser
 from json import loads
 
-CONF_FILE = 'generate.ini'
+CONF_FILE = 'test.ini'
 
 def main():
     config = ConfigParser(converters={"json":loads})

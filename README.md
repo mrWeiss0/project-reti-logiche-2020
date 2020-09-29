@@ -14,6 +14,17 @@ prince --javascript --no-artificial-fonts index.html
 ```
 Or print in browser, but with less features (no page numbers).
 
+## Tests
+Tests are implemented in `test_p.vhd` in [test sources](sources/test)
+with three procedures common for every testbench.
+
+The data for each test are in a separated file
+generated running the script [`test.py`](test.py)
+with the configuration in [`test.ini`](test.ini).
+Each section in the configuration generates a test with the given parameters,
+values can be manually inserted or randomly generated.  
+Configuration parameters are explained in `test.py`.
+
 ## How to regenerate Vivado Project after cloning
 Generate test data
 ```
