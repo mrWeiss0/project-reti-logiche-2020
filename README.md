@@ -5,7 +5,8 @@ Progetto finale di Reti Logiche
 The project consists in developing a hardware component in VHDL implementing the Working Zone encoding of the provided addresses. The component interfaces with a memory from which it reads input data and where it writes the result of the conversion.
 
 ## Documentation :it:
-The documentation for the project is at [docs/index.html](docs/index.html)
+The documentation for the project is available on GitHub Pages at
+[mrweiss0.github.io/project-reti-logiche-2020](https://mrweiss0.github.io/project-reti-logiche-2020/)
 
 Print to PDF with [Prince](https://www.princexml.com)
 ```
